@@ -1,0 +1,132 @@
+@import './mixins.less';
+
+.l-btn {
+  position: relative;
+  display: inline-block;
+  color: @body-color;
+  font-weight: @btn-font-weight;
+  line-height: @btn-line-height;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: @btn-border-width solid transparent;
+  box-shadow: @btn-box-shadow;
+  cursor: pointer;
+  transition: @btn-transition;
+  .button-size(@btn-padding-y, @btn-padding-x, @btn-font-size, @border-radius);
+
+  &.disabled,
+  &[disabled] {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: @btn-disabled-opacity;
+
+    > * {
+      pointer-events: none;
+    }
+  }
+}
+// type
+.l-btn-default {
+  .button-style(@white, @gray-400, @body-color, @white, @primary, @primary);
+}
+
+.l-btn-primary {
+  .button-style(@primary, @primary, @white);
+}
+
+.l-btn-info {
+  .button-style(@info, @info, @white);
+}
+
+.l-btn-warning {
+  .button-style(@warning, @warning, @white);
+}
+
+.l-btn-danger {
+  .button-style(@danger, @danger, @white);
+}
+
+.l-btn-text {
+  .button-style(transparent, transparent, @body-color);
+
+  box-shadow: none;
+}
+
+.l-btn-dashed {
+  .button-style(@white, @gray-400, @body-color, @white, @primary, @primary);
+
+  border-style: dotted;
+}
+
+.l-btn-link {
+  color: @btn-link-color;
+  font-weight: @font-weight-base;
+  text-decoration: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    color: @btn-link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: @link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: @btn-link-disabled-color;
+    pointer-events: none;
+  }
+}
+
+// size
+.l-btn-lg {
+  .button-size(
+    @btn-padding-y-lg,
+    @btn-padding-x-lg,
+    @btn-font-size-lg,
+    @btn-border-radius-lg
+  );
+}
+
+.l-btn-md {
+  .button-size(
+    @btn-padding-y-md,
+    @btn-padding-x-md,
+    @btn-font-size-md,
+    @btn-border-radius-md
+  );
+}
+
+.l-btn-sm {
+  .button-size(
+    @btn-padding-y-sm,
+    @btn-padding-x-sm,
+    @btn-font-size-sm,
+    @btn-border-radius-sm
+  );
+}
+
+// shape
+.l-btn-circle {
+  min-width: 32px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.l-btn-round {
+  border-radius: 30%;
+}
+
+// block
+.l-btn-block {
+  width: 100%;
+}
