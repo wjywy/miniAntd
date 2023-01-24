@@ -23,7 +23,7 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"src/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "husky install",
+    "prepare": "husky install && dumi setup",
     "prepublishOnly": "npm run build",
     "start": "npm run dev"
   },
@@ -68,7 +68,7 @@
     "commitizen": "^4.3.0",
     "css-loader": "^6.7.3",
     "cz-conventional-changelog": "^3.3.0",
-    "dumi": "^1.1.50",
+    "dumi": "^2.0.2",
     "eslint": "^8.23.0",
     "father": "^2.30.23",
     "husky": "^8.0.1",

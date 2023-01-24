@@ -9,7 +9,7 @@ nav:
 This is an example component.
 
 ```jsx
-import { Foo } from 'library';
+import { Foo } from 'cheesi';
 
 export default () => <Foo title="Hello dumi!" />
 ```

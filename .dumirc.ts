@@ -3,18 +3,18 @@ import * as path from 'path';
 
 export default defineConfig({
   outputPath: 'docs-dist',
-  title: 'library',
+  title: 'cheesi',
   themeConfig: {
-    name: 'library',
+    name: 'cheesi',
   },
   resolve: {
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
   },
-  base: '/library',
+  base: '/cheesi',
   publicPath: '/',
   exportStatic: {},
   alias: {
-    library: path.resolve(__dirname, 'src'),
+    cheesi: path.resolve(__dirname, 'src'),
   },
 });
