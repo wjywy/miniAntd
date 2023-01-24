@@ -13,8 +13,8 @@
     "skipLibCheck": true,
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "library": ["src"],
-      "library/*": ["src/*", "*"]
+      "cheesi": ["src"],
+      "cheesi/*": ["src/*", "*"]
     }
   },
   "include": ["src"]

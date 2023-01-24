@@ -1,4 +1,4 @@
-import { Button } from 'library';
+import { Button } from 'cheesi';
 import React from 'react';
 
 export default () => (
