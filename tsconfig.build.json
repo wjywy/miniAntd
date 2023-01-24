@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ES5",
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "library": ["src"],
+      "library/*": ["src/*", "*"]
+    }
+  },
+  "include": ["src"]
+}
