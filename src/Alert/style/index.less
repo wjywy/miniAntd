@@ -3,8 +3,8 @@
 
 .alt-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .alert {
@@ -15,6 +15,7 @@
   // left: 50%;
   z-index: 999;
   padding: @alt-padding-y @alt-padding-x;
+  padding-right: 1rem;
   margin: 1rem;
   min-width: 60px;
   // background-color:aliceblue;
@@ -38,12 +39,19 @@
     cursor: pointer;
   }
 }
+
 .alt-success{
   .alt-style(@success,@success)
 }
+
 .alt-danger{
   .alt-style(@danger,@danger)
 }
+
 .alt-info{
   .alt-style(@info,@info)
+}
+
+.alt-warning{
+  .alt-style(@warning,@warning)
 }
