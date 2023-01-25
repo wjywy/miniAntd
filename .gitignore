@@ -4,3 +4,5 @@ node_modules
 .dumi/tmp-test
 .dumi/tmp-production
 .DS_Store
+# gmy执行npm start时，本地src文件夹下总会出现.umi 配置文件，删除无效
+.umi
