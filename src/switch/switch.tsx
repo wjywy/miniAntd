@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React,{ FC,useRef,useState } from 'react';
+import React, { FC, useRef, useState } from 'react';
 //todo less变量
 //TODO 大小,是否禁用
 //todo 文字内容
@@ -32,7 +32,6 @@ const Switch: FC<SwitchProps> = ({
   const boxRef = useRef<HTMLDivElement>(null);
   const cirRef = useRef<HTMLDivElement>(null);
   const [res, setRes] = useState(false);
-  const checkedForColor:string = checkedColor === undefined ? '#1890ff' : checkedColor;
   const click = () => {
     //点击事件
     if (disabled) {
@@ -40,11 +39,11 @@ const Switch: FC<SwitchProps> = ({
     }
     //改变样式
     setRes(!res);
-    // console.log(res);
     if (res) {
       //开关打开
       cirRef.current!.style.marginLeft = '30px'; //使用非空断言
-      boxRef.current!.style.backgroundColor = checkedForColor;
+      boxRef.current!.style.backgroundColor =
+        checkedColor === undefined ? '#1890ff' : checkedColor; //未传入,使用默认的颜色
     } else {
       cirRef.current!.style.marginLeft = '0px';
       boxRef.current!.style.backgroundColor = '#ced4da';
