@@ -1,61 +1,24 @@
 @import './mixins.less';
 
-/* CSS代码 */
-.switch-box {
+.switch {
+  box-sizing: border-box;
   display: inline-block;
-  width: 40px;
-
-  .switch {
-    /* 隐藏checkbox默认样式 */
-    display: none;
-  }
-
-  label {
-    position: relative;
-    display: block;
-    margin: 1px;
-    height: 20px;
-    cursor: pointer;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -8px;
-      margin-left: -8px;
-      width: 16px;
-      height: 16px;
-      border-radius: 100%;
-      background-color: @white;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 6%);
-
-      /* 通过transform、transition属性控制元素过渡进而形成css3动画 */
-      transform: translateX(-9px);
-      transition: all 0.3s ease;
-    }
-
-    &::after {
-      /* after设置滚动前背景色 */
-      content: '';
-      display: block;
-      border-radius: 10px;
-      height: 20px;
-      background-color: @gray-400;
-      transition: all 0.3s ease;
-    }
-  }
+  width: 50px;
+  height: 20px;
+  background: @blue;
+  border-radius: 10px;
+  padding: 2px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
-.switch-box .switch:checked ~ label::before {
-  /* 语义：被选中的类名为"switch"元素后面的label元素里的伪类元素，进行更改css样式 
-  形成伪类结构选择器：":"冒号加布尔值"checked"
-  */
- 
-  /* " Ele1 ~ Ele2 "波浪号在css的作用：连接的元素必须有相同的父元素，选择出现在Ele1后的Ele2（但不必跟在Ele1，也就是说可以并列） */
-  transform: translateX(9px);
-}
-
-.switch-box .switch:checked ~ label::after {
-  background-color: @blue;
+.circle {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 30px;
+  transition: all 0.3s;
 }
