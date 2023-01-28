@@ -9,8 +9,7 @@ function DisableDemo() {
   return (
     <div id="components-switch-demo-shape">
       <Switch onChange={onChange} disabled={check}></Switch>
-      <span>禁用</span>
-      <br />
+      <div>禁用</div>
       <Button onClick={() => setCheck(!check)}>是否禁用</Button>
     </div>
   );

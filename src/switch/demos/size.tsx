@@ -6,6 +6,6 @@ const onChange = (checked: boolean) => {
 export default () => (
   <>
     <Switch onChange={onChange} disabled={false}></Switch>
-    <span>开关</span>
+    <div>开关</div>
   </>
 );

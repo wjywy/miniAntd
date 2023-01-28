@@ -1,8 +1,5 @@
 import classNames from 'classnames';
 import React, { FC, useRef, useState } from 'react';
-//todo less变量
-//TODO 大小,是否禁用
-//todo 文字内容
 export type SwitchSize = 'md' | 'sm';
 
 interface BaseSwitchProps {
@@ -59,15 +56,13 @@ const Switch: FC<SwitchProps> = ({
       ref={boxRef}
       style={
         disabled
-          ? { cursor: 'not-allowed', opacity: 0.65, background: checkedColor } //禁用设置透明度
+          ? { cursor: 'not-allowed', opacity: 0.65, background: checkedColor } //禁用的话,设置透明度
           : { background: checkedColor }
       }
     >
       {/* {res ? (checkedChildren===null?null:<span>{checkedChildren}</span>):null} */}
       <div className="circle" ref={cirRef}></div>
-      {/* {uncheckedChildren === null && !res ? null : (
-        <span>{uncheckedChildren}</span>
-      )} */}
+      {/* {uncheckedChildren === null && !res ? null : (<span>{uncheckedChildren}</span> )} */}
     </div>
   );
 };

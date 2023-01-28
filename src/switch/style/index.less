@@ -1,24 +1,26 @@
 @import './mixins.less';
 
+//外面盒子
 .switch {
   box-sizing: border-box;
   display: inline-block;
-  width: 50px;
-  height: 20px;
+  width: @switch-box-width;
+  height: @switch-box-height;
   background: @blue;
-  border-radius: 10px;
-  padding: 2px;
-  line-height: 16px;
+  border-radius: @switch-box-border-radius;
+  padding: @switch-box-padding;
+  line-height: @switch-box-inline-height;
   cursor: pointer;
 }
 
+//里面圆球
 .circle {
   box-sizing: border-box;
   display: inline-block;
-  height: 16px;
-  width: 16px;
+  height: @switch-circle-width-height;
+  width: @switch-circle-width-height;
   background-color: white;
-  border-radius: 8px;
-  margin-left: 30px;
-  transition: all 0.3s;
+  border-radius: @switch-circle-border-radius;
+  margin-left: @switch-circle-margin-left;
+  transition: @switch-circle-transition;
 }
