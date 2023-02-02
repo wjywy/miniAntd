@@ -35,11 +35,38 @@ const App = () => {
           />
           right
         </label>
+        <label>
+          <input
+            type="radio"
+            value={'top'}
+            name="drawer"
+            onClick={choosePosition}
+          />
+          top
+        </label>
+        <label>
+          <input
+            type="radio"
+            value={'bottom'}
+            name="drawer"
+            onClick={choosePosition}
+          />
+          bottom
+        </label>
       </form>
       <Button type="primary" onClick={openDrawer}>
         open
       </Button>
-      <Drawer onClose={closeDrawer} open={open} pushState={position} />
+      <Drawer
+        onClose={closeDrawer}
+        open={open}
+        pushState={position}
+        title={'woshixuxiaohui'}
+      >
+        <p>hshshhshh</p>
+        <p>hshshshhs</p>
+        <p>hshshshhs</p>
+      </Drawer>
     </>
   );
 };
