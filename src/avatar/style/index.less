@@ -1,0 +1,39 @@
+@import './mixins.less';
+
+.avatar{
+  display: inline-block;
+  background-color: @pink;
+  width: @avatar-r;
+  height: @avatar-r;
+  line-height: @avatar-r;
+  text-align: center;
+  color:@white;
+  overflow: hidden;
+  
+  img{
+    width: @avatar-r;
+    height: @avatar-r;
+  }
+}
+
+.avatar-circle{
+  border-radius:100% ; 
+}
+
+.avatar-square{
+  border-radius:25% ; 
+}
+
+//group
+.AvatarGroup{
+  display: inline-block;
+
+  &>.avatar{
+    border: @avatar-group-border;
+    margin-left: @avatar-group-margin-left;
+  }
+  
+  &>.avatar:first-child {
+    margin-left: 0;
+  }
+}
