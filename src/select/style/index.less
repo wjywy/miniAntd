@@ -1,0 +1,61 @@
+.select-body {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  height: 60px;
+  max-width: 100px;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+.select-body .select-header {
+  width: 100%;
+  min-height: 30px;
+  position: relative;
+  border: 1px solid #dad8d8;
+  padding: 5px;
+  background-color: #fff;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+
+.select-body .select-header:hover {
+  border: 1px solid rgb(62, 165, 249);
+}
+
+.select-body .select-header span.card {
+  display: flex;
+  margin: auto 2px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.select-body .select-header span.card:hover {
+  background-color: #f5f5f5;
+}
+
+.select-body .select-header span.card span {
+  display: inline-block;
+  margin-left: 2px;
+  padding: 0 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.select-body .select-header span.card span:hover {
+  color: black;
+}
+
+.defaultcard {
+  display: flex;
+  margin: auto 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
