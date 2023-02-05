@@ -1,6 +1,5 @@
 import Icon from 'cheesi/icon';
 import React, { FC, useState } from 'react';
-import './style/index.less';
 
 interface optionType {
   title: string;
