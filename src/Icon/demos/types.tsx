@@ -2,7 +2,7 @@ import { Icon } from 'cheesi';
 import React from 'react';
 
 
-const demo=()=>{alert(1)}
+const demo=()=>{alert("这是你可以设置的函数")}
 export default () => (
   <div>
     <Icon name='add' size='16'></Icon>
