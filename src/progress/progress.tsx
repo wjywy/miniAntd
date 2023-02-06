@@ -46,17 +46,17 @@ const Progress: React.FC<ProgressProps> = (props: ProgressProps) => {
     ...restProps
   } = props;
   const getProgressInfo = () => {
-    const { format } = props;
+    // const { format } = props;
     if (showInfo === false) return null;
-    const textFormatter = format || ((percentNumber) => `${percentNumber}%`);
-    return (
-      <span
-        className={`ci-pg-text`}
-        title={typeof text === 'string' ? text : undefined}
-      >
-        {text}
-      </span>
-    );
+    // const textFormatter = format || ((percentNumber) => `${percentNumber}%`);
+    // return (
+    //   <span
+    //     className={`ci-pg-text`}
+    //     title={typeof text === 'string' ? text : undefined}
+    //   >
+    //     {text}
+    //   </span>
+    // );
   };
   let progress;
   let progressInfo = getProgressInfo();

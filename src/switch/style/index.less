@@ -1,0 +1,26 @@
+@import './mixins.less';
+
+//外面盒子
+.switch {
+  box-sizing: border-box;
+  display: inline-block;
+  width: @switch-box-width;
+  height: @switch-box-height;
+  background: @blue;
+  border-radius: @switch-box-border-radius;
+  padding: @switch-box-padding;
+  line-height: @switch-box-inline-height;
+  cursor: pointer;
+}
+
+//里面圆球
+.circle {
+  box-sizing: border-box;
+  display: inline-block;
+  height: @switch-circle-width-height;
+  width: @switch-circle-width-height;
+  background-color: white;
+  border-radius: @switch-circle-border-radius;
+  margin-left: @switch-circle-margin-left;
+  transition: @switch-circle-transition;
+}

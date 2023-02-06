@@ -10,6 +10,7 @@ export default defineConfig({
   resolve: {
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
+    entryFile:'./src/index.tsx' //这里是API表格解析入口
   },
   base: '/cheesi',
   publicPath: '/',
