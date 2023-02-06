@@ -57,7 +57,8 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.49.0",
-    "classnames": "^2.3.2"
+    "classnames": "^2.3.2",
+    "rc-progress": "^3.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
