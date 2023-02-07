@@ -27,8 +27,8 @@ const Steps: React.FC<ProgressStepsProps> = (props) => {
     styledSteps[i] = (
       <div
         key={i}
-        className={classNames(`ci-steps-item`, {
-          [`ci-steps-item-active`]: i <= current - 1,
+        className={classNames(`ci-pg-steps-item`, {
+          [`ci-pg-steps-item-active`]: i <= current - 1,
         })}
         style={{
           backgroundColor: i <= current - 1 ? color : trailColor,
@@ -39,7 +39,7 @@ const Steps: React.FC<ProgressStepsProps> = (props) => {
     );
   }
   return (
-    <div className={`ci-steps-outer`}>
+    <div className={`ci-pg-steps-outer`}>
       {styledSteps}
       {children}
     </div>

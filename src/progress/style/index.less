@@ -2,6 +2,18 @@
 @progress-ani-prefix:~"ci-pg-ani";
 
 .@{progress-prefix}{
+  &-text{
+    display: inline-block;
+    width: 2em;
+    margin-left: 8px;
+    font-size:  @font-size-base;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+    word-break: normal;
+  }
+
   &-line {
     font-size: @font-size-base;
   }
@@ -11,7 +23,13 @@
     width: 100%;
     margin-right: 0;
     padding-right: 0;
+    .@{progress-prefix}-show-info & {
+      margin-right: ~'calc(-2em - 9px)';
+      padding-right: ~'calc(2em + 9px)';
+      box-sizing: border-box;
+    }
   }
+
 
   &-inner {
     position: relative;
@@ -21,13 +39,12 @@
     vertical-align: middle;
     background-color: @progress-remaining-color;
     border-radius: @progress-radius;
+
+    .@{progress-prefix}-circle-path {
+      stroke: @primary;
+    }
   }
 
-
-  &-show-info {
-    margin-right: ~'calc(-2em - 8px)';
-    padding-right: ~'calc(2em + 8px)';
-  }
 
   &-bg {
     position: relative;
@@ -62,6 +79,55 @@
       }
     }
 
+  }
+
+  &-circle
+  {
+    &-trail {
+      stroke: @progress-remaining-color;
+    }
+
+    & .@{progress-prefix}-inner {
+      position: relative;
+      line-height: 1;
+      background-color: #fff;
+    }
+
+    & .@{progress-prefix}-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      white-space: normal;
+      text-align: center;
+    }
+
+  }
+
+  &-steps{
+    display: inline-block;
+
+    &-outer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-item {
+      flex-shrink: 0;
+      min-width: 2px;
+      margin-right: 2px;
+      background:#f3f3f3;
+      transition: all 0.3s;
+      
+      &-active {
+        background: @progress-default-color;
+      }
+    }
   }
 }
 
