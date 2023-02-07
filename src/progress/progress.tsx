@@ -1,6 +1,6 @@
-import { Icon } from 'cheesi';
 import classNames from 'classnames';
 import * as React from 'react';
+import Icon from '../icon';
 import Circle from './circle';
 import Line from './line';
 import Steps from './steps';
@@ -9,13 +9,7 @@ export type ProgressType = 'line' | 'circle';
 export type statuses = 'normal' | 'exception' | 'active' | 'success';
 export type ProgressSize = 'default' | 'small';
 
-export interface SuccessProps {
-  percent?: number;
-  strokeColor?: string;
-}
-
 export interface ProgressProps {
-  prefixCls?: string;
   className?: string;
   type?: ProgressType;
   percent?: number;
@@ -27,10 +21,7 @@ export interface ProgressProps {
   strokeColor?: string | string[];
   trailColor?: string;
   width?: number;
-  success?: SuccessProps;
   style?: React.CSSProperties;
-  gapDegree?: number;
-  gapPosition?: 'top' | 'bottom' | 'left' | 'right';
   size?: ProgressSize;
   steps?: number;
   children?: React.ReactNode;
