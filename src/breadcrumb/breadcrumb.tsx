@@ -1,97 +1,169 @@
-import classNames from 'classnames';
-import React, { FC } from 'react';
+import React, { Fragment } from 'react';
+import './style/index.less';
 
-const isString = (children: React.ReactNode) => {
-  if (typeof children === 'string') {
-    return <span>{children}</span>;
-  }
-  return children;
-};
-
-export type ButtonType =
-  | 'default'
-  | 'primary'
-  | 'info'
-  | 'warning'
-  | 'danger'
-  | 'dashed'
-  | 'link'
-  | 'text';
-
-export type ButtonSize = 'lg' | 'md' | 'sm';
-export type ButtonHTMLTypes = 'submit' | 'button' | 'reset';
-
-interface BaseButtonProps {
-  type?: ButtonType;
-  size?: ButtonSize;
-  disabled?: boolean;
-  block?: boolean;
-  className?: string;
-  href?: string;
-  icon?: React.ReactNode;
+// 路由
+export interface Route {
+  path: string; // 路径
+  breadcrumbName: string; // 面包屑名字
   children?: React.ReactNode;
 }
 
-type NativeButtonProps = {
-  htmlType?: ButtonHTMLTypes;
-  target?: string;
-  onClick?: React.MouseEventHandler<HTMLElement>;
-} & BaseButtonProps &
-  Omit<React.ButtonHTMLAttributes<HTMLElement>, 'type'>;
+// 面包屑类型限制
+export interface BreadcrumbProps {
+  routes?: Route[]; // 多个route
+  separator?: React.ReactNode;
+  params?: any; // 路由的参数
+  itemRender?: (
+    route: Route,
+    params: any,
+    routes: Array<Route>,
+    paths: Array<string>,
+  ) => React.ReactNode; // 自定义链接函数
+  children?: React.ReactNode;
+}
 
-type AnchorButtonProps = {
-  href?: string;
-  onClick?: React.MouseEventHandler<HTMLElement>;
-} & BaseButtonProps &
-  Omit<React.AnchorHTMLAttributes<HTMLElement>, 'type'>;
+export interface Option {
+  keepEmpty?: boolean;
+}
 
-export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
-
-const Button: FC<ButtonProps> = ({
-  type,
-  htmlType,
-  size,
-  disabled,
-  block,
-  className,
-  href,
-  children,
-  ...restProps
-}) => {
-  const classes = classNames('l-btn', className, {
-    [`l-btn-${type}`]: type,
-    [`l-btn-${size}`]: size,
-    'l-btn-block': block,
-  });
-
-  if (type === 'link' && href) {
-    return (
-      <a className={classes} href={href} {...restProps}>
-        {children}
-      </a>
-    );
+// 在面包屑上显示的是application,
+// const breadcrumb: Record<string, string> = {
+//     '/apps': 'application',
+//     '/apps/1': 'appliction1',
+//     '/apps/2': 'appliction2',
+//     '/apps/3': 'appliction3',
+//   };
+const getBreadcrumbName = (route: Route, params: any) => {
+  if (!route.breadcrumbName) {
+    return null;
   }
 
-  const kids = isString(children);
+  const paramsKeys = Object.keys(params).join('|'); // Object.keys返回一个由一个给定对象的自身可枚举属性组成的数组
+  const name = route.breadcrumbName.replace(
+    new RegExp(`:(${paramsKeys})`, 'g'),
+    (replacement, key) => params[key] || replacement,
+  );
+  return name;
+};
 
-  return (
-    <button
-      type={htmlType ?? 'submit'}
-      className={classes}
-      disabled={disabled}
-      {...restProps}
-    >
-      {kids}
-    </button>
+const defaultItemRender = (
+  route: Route,
+  params: any,
+  routes: Array<Route>,
+  path: Array<string>,
+): React.ReactNode => {
+  const isLastItem = routes.indexOf(route) === routes.length - 1;
+  const name = getBreadcrumbName(route, params);
+  return isLastItem ? (
+    <span>{name}</span>
+  ) : (
+    <a href={`#/${path.join('/')}`}>{name}</a>
   );
 };
 
-Button.defaultProps = {
-  disabled: false,
-  type: 'default',
-  size: 'md',
-  block: false,
-  htmlType: 'button' as ButtonProps['htmlType'],
+const getPath = (path: string, params: any) => {
+  let paths = (path || '').replace(/^\//, '');
+  Object.keys(params).forEach((key) => {
+    paths = path.replace(`:${key}`, params[key]);
+  });
+  return paths;
 };
 
-export default Button;
+const addChildPath = (paths: string[], childPath: string, params: any) => {
+  const originalPaths = [...paths];
+  const path = getPath(childPath || '', params);
+  if (path) {
+    originalPaths.push(path);
+  }
+  return originalPaths;
+};
+
+const App: React.FC<BreadcrumbProps> = ({
+  children,
+  separator,
+  params = {},
+  itemRender = defaultItemRender, // 自定义链接函数， 和react-router配合使用
+  routes,
+  //   ...rest,
+}) => {
+  let crumbs: React.ReactNode;
+  if (routes && routes.length > 0) {
+    const paths: string[] = [];
+    crumbs = routes.map((route) => {
+      const path = getPath(route.path, params);
+      if (path) {
+        paths.push(path);
+      }
+
+      if (Array.isArray(route.children) && route.children.length) {
+        {
+          const item = route.children.map((child) => ({
+            key: child.path || child.breadcrumbName,
+            label: itemRender(
+              child,
+              params,
+              routes,
+              addChildPath(paths, child.path, params),
+            ),
+          }));
+        }
+      }
+      return <div key={route.breadcrumbName}>hahah</div>;
+    });
+  }
+
+  if (Array.isArray(children)) {
+    crumbs = children.map(() => {
+      return (
+        <>
+          <div>hahah</div>
+        </>
+      );
+    });
+  }
+
+  const changeSeparator = (children: React.ReactNode) => {
+    let newChild: React.ReactNode;
+    // 为第一项和最后一项增添标识
+    if (Array.isArray(children)) {
+      newChild = children.map((item, index) => {
+        let newObj = { ...item.props };
+        let obj = { ...item };
+        obj.props = { ...newObj };
+        if (index === 0) {
+          obj.props.count = 'first';
+        } else if (index === children.length - 1) {
+          obj.props.count = 'last';
+        }
+        return obj;
+      });
+    }
+    if (!separator) {
+      return newChild;
+    }
+
+    let newChildren: React.ReactNode;
+    if (Array.isArray(newChild)) {
+      newChildren = newChild.map((item) => {
+        if (item.props.separator) {
+          return item;
+        }
+        // 不能直接赋值，要进行多次转换
+        let newObj = { ...item.props };
+        let obj = { ...item };
+        newObj.separator = separator;
+        obj.props = { ...newObj };
+        console.log(obj.props);
+        return <Fragment key={item.props.children}>{obj}</Fragment>;
+      });
+      return newChildren;
+    }
+  };
+
+  return (
+    <>
+      <div className="bread_flex">{changeSeparator(children)}</div>
+    </>
+  );
+};
+export default App;

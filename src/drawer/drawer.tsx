@@ -18,6 +18,11 @@ const Drawer = (props: DrawerProps) => {
     left?: string;
   };
 
+  console.log('open', open);
+  if (open !== true) {
+    document.body.style.overflow = 'auto';
+    console.log('hahahhah');
+  }
   const chooseStyle = (pushState: Placement): styleReturn => {
     let width, height;
     if (pushState === 'bottom' || pushState === 'top') {
@@ -44,6 +49,8 @@ const Drawer = (props: DrawerProps) => {
   };
 
   function renderHeader() {
+    console.log('wuwuwu');
+    document.body.style.overflow = 'hidden';
     if (!title) {
       return null;
     }
@@ -76,4 +83,5 @@ const Drawer = (props: DrawerProps) => {
     </>
   );
 };
+Drawer.defaultProps = {};
 export default Drawer;

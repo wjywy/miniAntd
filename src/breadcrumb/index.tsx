@@ -1,4 +1,4 @@
-import Button from './breadcrumb';
+import Breadcrumb from './breadcrumb';
 
 import '../style';
-export default Button;
+export default Breadcrumb;
