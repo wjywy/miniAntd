@@ -106,21 +106,22 @@ const App: React.FC<BreadcrumbProps> = ({
               addChildPath(paths, child.path, params),
             ),
           }));
+          console.log(item); // 暂未修复， 只是为了提交
         }
       }
-      return <div key={route.breadcrumbName}>hahah</div>;
+      return <div key={route.breadcrumbName}>{crumbs}</div>; // 暂未修复，暂时填入crumbs
     });
   }
 
-  if (Array.isArray(children)) {
-    crumbs = children.map(() => {
-      return (
-        <>
-          <div>hahah</div>
-        </>
-      );
-    });
-  }
+  // if (Array.isArray(children)) {
+  //   crumbs = children.map(() => {
+  //     return (
+  //       <>
+  //         <div>hahah</div>
+  //       </>
+  //     );
+  //   });
+  // }
 
   const changeSeparator = (children: React.ReactNode) => {
     let newChild: React.ReactNode;

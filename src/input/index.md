@@ -26,3 +26,9 @@ nav:
 
 无边框
 <code src="./demos/borderInput.tsx"></code>
+
+基础文本域,限定字符的最大长度，可能加上表情后有错误
+<code src="./demos/areaInput.tsx"></code>
+
+自适应文本框高度
+<code src="./demos/heiAreaInput.tsx"></code>

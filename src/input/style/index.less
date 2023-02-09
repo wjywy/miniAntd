@@ -1,8 +1,21 @@
-.input_basic {
+// 一些共同的样式
+.basicBorder {
+    border: 1px solid rgb(217, 217, 217);
     border-radius: 7px;
     outline: none;
-    width: 30vw;
     display: block;
+
+    &:hover {
+        border: 1px solid rgb(64, 150, 255);
+    }
+}
+
+// 基础的input
+.input_basic {
+    .basicBorder;
+
+    width: 30vw;
+    height: 32px;
 
     &::placeholder {
         font-size: 16px;
@@ -14,10 +27,6 @@
 
 .small {
     height: 24px;
-}
-
-.default {
-    height: 32px;
 }
 
 .large {
@@ -42,14 +51,6 @@
     }
 }
 
-.normal {
-    border: 1px solid rgb(217, 217, 217);
-
-    &:hover {
-        border: 1px solid rgb(64, 150, 255);
-    }
-}
-
 // 无边框
 
 .noBorderd {
@@ -58,4 +59,14 @@
     &:hover {
         border: none;
     }
+}
+
+// 文本域
+.input_area {
+    .basicBorder
+}
+
+// textarea原生样式的改变
+textarea {
+    padding: 0;
 }
