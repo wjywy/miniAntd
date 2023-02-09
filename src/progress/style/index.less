@@ -1,0 +1,149 @@
+@progress-prefix:~"ci-pg";
+@progress-ani-prefix:~"ci-pg-ani";
+
+.@{progress-prefix}{
+  &-text{
+    display: inline-block;
+    width: 2em;
+    margin-left: 8px;
+    font-size:  @font-size-base;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+    word-break: normal;
+  }
+
+  &-line {
+    font-size: @font-size-base;
+  }
+
+  &-outer {
+    display: inline-block;
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    .@{progress-prefix}-show-info & {
+      margin-right: ~'calc(-2em - 9px)';
+      padding-right: ~'calc(2em + 9px)';
+      box-sizing: border-box;
+    }
+  }
+
+
+  &-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    background-color: @progress-remaining-color;
+    border-radius: @progress-radius;
+
+    .@{progress-prefix}-circle-path {
+      stroke: @primary;
+    }
+  }
+
+
+  &-bg {
+    position: relative;
+    background-color: @progress-default-color;
+    border-radius: @progress-radius;
+    transition: all 0.4s 0s;
+  }
+
+  &-status{
+    &-active {
+      .@{progress-prefix}-bg::before{
+        background-color: @gray-900;
+        position: absolute;
+        inset: 0 0 0 0;
+        opacity: 0;
+        content: '';
+        border-radius: 100px;
+        animation: ~'@{progress-ani-prefix}-active' 1.5s infinite;
+        z-index: 1;
+      }
+    }
+
+    &-exception{
+      .@{progress-prefix}-bg {
+        background-color: @danger;
+      }
+    }
+
+    &-success{
+      .@{progress-prefix}-bg {
+        background-color: @success;
+      }
+    }
+
+  }
+
+  &-circle
+  {
+    &-trail {
+      stroke: @progress-remaining-color;
+    }
+
+    & .@{progress-prefix}-inner {
+      position: relative;
+      line-height: 1;
+      background-color: #fff;
+    }
+
+    & .@{progress-prefix}-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+      white-space: normal;
+      text-align: center;
+    }
+
+  }
+
+  &-steps{
+    display: inline-block;
+
+    &-outer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-item {
+      flex-shrink: 0;
+      min-width: 2px;
+      margin-right: 2px;
+      background:#f3f3f3;
+      transition: all 0.3s;
+      
+      &-active {
+        background: @progress-default-color;
+      }
+    }
+  }
+}
+
+@keyframes ~"@{progress-ani-prefix}-active" {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0.1;
+  }
+
+  20% {
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0) scaleX(1);
+    opacity: 0;
+  }
+}

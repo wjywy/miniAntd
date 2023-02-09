@@ -4,6 +4,7 @@
     "function-no-unknown": null,
     "selector-class-pattern": null,
     "at-rule-no-unknown": null,
-    "color-function-notation": "legacy"
+    "color-function-notation": "legacy",
+    "keyframes-name-pattern": null
   }
 }

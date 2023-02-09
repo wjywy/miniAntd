@@ -1,9 +1,11 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
+import mountTest from '../../tests/mount';
 
 import Button from '../';
 
 describe('Button', () => {
+  mountTest(Button);
   it('should render correctly', () => {
     const { getByTestId } = render(
       <div data-testid="button">

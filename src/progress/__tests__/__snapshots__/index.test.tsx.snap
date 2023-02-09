@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress render normal progress 1`] = `
+<div
+  class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
+>
+  <div
+    class="ci-pg-outer"
+  >
+    <div
+      class="ci-pg-inner"
+    >
+      <div
+        class="ci-pg-bg"
+        style="width: 0%; height: 8px;"
+      />
+    </div>
+  </div>
+  <span
+    class="ci-pg-text"
+    title="0%"
+  >
+    0%
+  </span>
+</div>
+`;
+
+exports[`Progress render trailColor progress 1`] = `
+<div
+  class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  trailcolor="#ffffff"
+>
+  <div
+    class="ci-pg-outer"
+  >
+    <div
+      class="ci-pg-inner"
+      style="background-color: rgb(255, 255, 255);"
+    >
+      <div
+        class="ci-pg-bg"
+        style="width: 0%; height: 8px;"
+      />
+    </div>
+  </div>
+  <span
+    class="ci-pg-text"
+    title="0%"
+  >
+    0%
+  </span>
+</div>
+`;
+
+exports[`Progress should render correct strokeLinecap 1`] = `
+<div
+  class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  stroke-linecap="butt"
+  style="width: 120px; height: 120px; font-size: 24px;"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke-linecap="butt"
+        stroke-width="6"
+        style="stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="butt"
+        stroke-width="6"
+        style="stroke: #2db7f5; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 147.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+      title="50%"
+    >
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render correct strokeLinecap 2`] = `
+<div
+  class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  stroke-linecap="round"
+  style="width: 120px; height: 120px; font-size: 24px;"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: #2db7f5; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 150.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+      title="50%"
+    >
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render different sizes correctly 1`] = `
+<div
+  data-testid="progress-size"
+>
+  <div
+    class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-small"
+  >
+    <div
+      class="ci-pg-outer"
+    >
+      <div
+        class="ci-pg-inner"
+      >
+        <div
+          class="ci-pg-bg"
+          style="width: 0%; height: 6px;"
+        />
+      </div>
+    </div>
+    <span
+      class="ci-pg-text"
+      title="0%"
+    >
+      0%
+    </span>
+  </div>
+  <div
+    class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  >
+    <div
+      class="ci-pg-outer"
+    >
+      <div
+        class="ci-pg-inner"
+      >
+        <div
+          class="ci-pg-bg"
+          style="width: 0%; height: 8px;"
+        />
+      </div>
+    </div>
+    <span
+      class="ci-pg-text"
+      title="0%"
+    >
+      0%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render steps while steps exist 1`] = `
+<div
+  class="ci-pg-steps ci-pg-status-normal ci-pg-show-info ci-pg-default"
+>
+  <div
+    class="ci-pg-steps-outer"
+  >
+    <div
+      class="ci-pg-steps-item"
+      style="width: 14px; height: 8px;"
+    />
+    <div
+      class="ci-pg-steps-item"
+      style="width: 14px; height: 8px;"
+    />
+    <div
+      class="ci-pg-steps-item"
+      style="width: 14px; height: 8px;"
+    />
+    <span
+      class="ci-pg-text"
+      title="0%"
+    >
+      0%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render stroke color 1`] = `
+<div
+  class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  style="width: 120px; height: 120px; font-size: 24px;"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: red; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 150.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+      title="50%"
+    >
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render stroke color 2`] = `
+<div
+  class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  style=""
+>
+  <div
+    class="ci-pg-outer"
+  >
+    <div
+      class="ci-pg-inner"
+    >
+      <div
+        class="ci-pg-bg"
+        style="width: 50%; height: 8px; background: red;"
+      />
+    </div>
+  </div>
+  <span
+    class="ci-pg-text"
+    title="50%"
+  >
+    50%
+  </span>
+</div>
+`;
+
+exports[`Progress should render stroke color 3`] = `
+<div
+  class="ci-pg-circle ci-pg-status-success ci-pg-show-info ci-pg-default"
+  style="width: 120px; height: 120px; font-size: 24px;"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: red; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 150.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+    >
+      <i
+        class="iconfont icon-success"
+        style="font-size: 16px;"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render stroke color 4`] = `
+<div
+  class="ci-pg-circle ci-pg-status-exception ci-pg-show-info ci-pg-default"
+  style="width: 120px; height: 120px; font-size: 24px;"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: red; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 150.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+    >
+      <i
+        class="iconfont icon-fail"
+        style="font-size: 16px;"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render trail color 1`] = `
+<div
+  class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  style="width: 120px; height: 120px; font-size: 24px;"
+  trailcolor="red"
+>
+  <div
+    class="ci-pg-inner"
+    style="width: 120px; height: 120px; font-size: 24px;"
+  >
+    <svg
+      class="ci-pg-circle"
+      role="presentation"
+      viewBox="-50 -50 100 100"
+    >
+      <circle
+        class="ci-pg-circle-trail"
+        cx="0"
+        cy="0"
+        r="47"
+        stroke="red"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: red; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 0; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0;"
+      />
+      <circle
+        class="ci-pg-circle-path"
+        cx="0"
+        cy="0"
+        opacity="1"
+        r="47"
+        stroke-linecap="round"
+        stroke-width="6"
+        style="stroke: #2db7f5; stroke-dasharray: 295.3097094374406px 295.3097094374406; stroke-dashoffset: 150.6548547187203; transform: rotate(-90deg); transform-origin: 0 0; transition: stroke-dashoffset .3s ease 0s, stroke-dasharray .3s ease 0s, stroke .3s, stroke-width .06s ease .3s, opacity .3s ease 0s; fill-opacity: 0; transition-duration: 0s, 0s;"
+      />
+    </svg>
+    <span
+      class="ci-pg-text"
+      title="50%"
+    >
+      50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Progress should render trail color 2`] = `
+<div
+  class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
+  style=""
+  trailcolor="red"
+>
+  <div
+    class="ci-pg-outer"
+  >
+    <div
+      class="ci-pg-inner"
+      style="background-color: red;"
+    >
+      <div
+        class="ci-pg-bg"
+        style="width: 50%; height: 8px;"
+      />
+    </div>
+  </div>
+  <span
+    class="ci-pg-text"
+    title="50%"
+  >
+    50%
+  </span>
+</div>
+`;
