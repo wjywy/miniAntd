@@ -1,4 +1,4 @@
-import Icon from 'cheesi/icon';
+import Icon from 'cheesi/Icon';
 import React, { FC, useState } from 'react';
 
 interface optionType {
