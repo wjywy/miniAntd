@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`面包屑 filter React.Fragment 1`] = `
+<div
+  class="bread_flex"
+>
+  <div>
+    子元素只能使用BreadcrumbItem,请修改
+  </div>
+</div>
+`;
+
+exports[`面包屑 should allow Breadcrumb.Item is null or undefined 1`] = `
+<div
+  class="bread_flex"
+>
+  <div>
+    子元素只能使用BreadcrumbItem,请修改
+  </div>
+</div>
+`;
+
+exports[`面包屑 should not display Breadcrumb Item when its children is falsy 1`] = `
+<div
+  class="bread_flex"
+>
+  <div>
+    <span>
+      <span
+        class="bread_name"
+      >
+        xxx
+      </span>
+    </span>
+    <span
+      class="bread_sep"
+    >
+      /
+    </span>
+  </div>
+  <div>
+    <span>
+      <span
+        class="bread_name"
+      >
+        yyy
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`面包屑 should support Breadcrumb.Item default separator 1`] = `
+<div
+  class="bread_flex"
+>
+  <div>
+    子元素只能使用BreadcrumbItem,请修改
+  </div>
+</div>
+`;
+
+exports[`面包屑 should support React.Fragment and falsy children 1`] = `
+<div
+  class="bread_flex"
+>
+  <div>
+    子元素只能使用BreadcrumbItem,请修改
+  </div>
+</div>
+`;

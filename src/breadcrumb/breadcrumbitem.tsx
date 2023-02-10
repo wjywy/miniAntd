@@ -10,7 +10,9 @@ export interface BreadcrumbItemProps {
 }
 
 // 为什么antd这里将href放在剩余参数中?
-const App: React.FC<BreadcrumbItemProps> = (props) => {
+const BreadcrumbItem: React.FC<BreadcrumbItemProps> & {
+  _CHEESI_BREADCRUMB_ITEM: boolean;
+} = (props) => {
   const { separator = '/', children, href, menu, count } = props;
 
   const [hover, setHover] = React.useState(false);
@@ -103,4 +105,7 @@ const App: React.FC<BreadcrumbItemProps> = (props) => {
   return null;
 };
 
-export default App;
+// 判断子元素是否为breadcrumbItem的标识
+BreadcrumbItem._CHEESI_BREADCRUMB_ITEM = true;
+
+export default BreadcrumbItem;

@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+// import Breadcrumb from '.';
+import BreadcrumbItem from './breadcrumbitem';
 import './style/index.less';
 
 // 路由
@@ -78,7 +80,9 @@ const addChildPath = (paths: string[], childPath: string, params: any) => {
   return originalPaths;
 };
 
-const App: React.FC<BreadcrumbProps> = ({
+const App: React.FC<BreadcrumbProps> & {
+  Item: typeof BreadcrumbItem;
+} = ({
   children,
   separator,
   params = {},
@@ -86,6 +90,7 @@ const App: React.FC<BreadcrumbProps> = ({
   routes,
   //   ...rest,
 }) => {
+  // const [isItem, setIsItem] = useState()
   let crumbs: React.ReactNode;
   if (routes && routes.length > 0) {
     const paths: string[] = [];
@@ -127,17 +132,36 @@ const App: React.FC<BreadcrumbProps> = ({
     let newChild: React.ReactNode;
     // 为第一项和最后一项增添标识
     if (Array.isArray(children)) {
+      let isItem: boolean = true;
       newChild = children.map((item, index) => {
+        // 当出现的元素类型非breadcrumbItem
+        if (
+          item === null ||
+          item === undefined ||
+          item.type === undefined ||
+          item.type._CHEESI_BREADCRUMB_ITEM === undefined
+        ) {
+          isItem = false;
+          return null;
+        }
+
         let newObj = { ...item.props };
         let obj = { ...item };
         obj.props = { ...newObj };
-        if (index === 0) {
+        if (index === 0 && item.type._CHEESI_BREADCRUMB_ITEM === true) {
           obj.props.count = 'first';
         } else if (index === children.length - 1) {
           obj.props.count = 'last';
         }
         return obj;
       });
+      if (isItem !== true) {
+        newChild = (
+          <>
+            <div>子元素只能使用BreadcrumbItem,请修改</div>
+          </>
+        );
+      }
     }
     if (!separator) {
       return newChild;
@@ -154,7 +178,6 @@ const App: React.FC<BreadcrumbProps> = ({
         let obj = { ...item };
         newObj.separator = separator;
         obj.props = { ...newObj };
-        console.log(obj.props);
         return <Fragment key={item.props.children}>{obj}</Fragment>;
       });
       return newChildren;
@@ -167,4 +190,5 @@ const App: React.FC<BreadcrumbProps> = ({
     </>
   );
 };
+App.Item = BreadcrumbItem;
 export default App;

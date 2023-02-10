@@ -1,7 +1,7 @@
 // 与路由结合在一起
 import { Breadcrumb } from 'cheesi';
 import React from 'react';
-import BreadcrumbItem from '../breadcrumbitem';
+// import BreadcrumbItem from '../breadcrumbitem';
 
 // type Record<K extends keyof any, T> = {
 //   [P in K]: T;
@@ -15,15 +15,15 @@ import BreadcrumbItem from '../breadcrumbitem';
 const App = () => (
   <>
     <Breadcrumb>
-      <BreadcrumbItem href="http://www.baidu.com" separator="/">
+      <Breadcrumb.Item href="http://www.baidu.com" separator="/">
         Home
-      </BreadcrumbItem>
-      <BreadcrumbItem href="http://www.baidu.com" separator="/">
+      </Breadcrumb.Item>
+      <Breadcrumb.Item href="http://www.baidu.com" separator="/">
         Left
-      </BreadcrumbItem>
-      <BreadcrumbItem href="http://www.baidu.com" separator="/">
+      </Breadcrumb.Item>
+      <Breadcrumb.Item href="http://www.baidu.com" separator="/">
         Right
-      </BreadcrumbItem>
+      </Breadcrumb.Item>
     </Breadcrumb>
   </>
 );

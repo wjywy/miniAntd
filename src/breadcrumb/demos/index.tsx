@@ -1,16 +1,20 @@
 import { Breadcrumb } from 'cheesi';
 import React from 'react';
-import BreadcrumbItem from '../breadcrumbitem';
+// import BreadcrumbItem from '../breadcrumbitem';
 
 const App = () => (
   <>
     <Breadcrumb>
-      <BreadcrumbItem href="http://www.baidu.com">Home</BreadcrumbItem>
-      <BreadcrumbItem href="http://www.baidu.com">Left</BreadcrumbItem>
-      <BreadcrumbItem href="http://www.baidu.com">
+      {/* <div>hahahah</div> */}
+      {/* {undefined} */}
+      {/* <Breadcrumb.Item /> */}
+      {/* {0} */}
+      <Breadcrumb.Item href="http://www.baidu.com">Home</Breadcrumb.Item>
+      <Breadcrumb.Item href="http://www.baidu.com">Left</Breadcrumb.Item>
+      <Breadcrumb.Item href="http://www.baidu.com">
         {/* <img src="../../../assets/shan.jpg" alt="" /> */}
         Right
-      </BreadcrumbItem>
+      </Breadcrumb.Item>
     </Breadcrumb>
   </>
 );
