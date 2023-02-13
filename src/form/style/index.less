@@ -1,0 +1,59 @@
+@form-prefix-cls: ~'ci-form';
+
+.@{form-prefix-cls}{
+  .reset-form();
+  
+  // ================================================================
+  // =                             size                             =
+  // ================================================================
+
+  .formSize(@input-height) {
+    .@{form-item-prefix-cls}-label > label {
+      height: @input-height;
+    }
+
+    .@{form-item-prefix-cls}-control-input {
+      min-height: @input-height;
+    }
+  }
+
+  &-small {
+    .formSize(@font-size-sm);
+  }
+
+  &-large {
+    .formSize(@font-size-lg);
+  }
+
+  // ================================================================
+  // =                             layout                           =
+  // ================================================================
+  &-horizontal{
+    .@{form-item-prefix-cls}-label {
+      flex-grow: 0;
+    }
+    .@{form-item-prefix-cls}-control {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .@{form-item-prefix-cls}-label[class$='-24'] + .@{form-item-prefix-cls}-control,
+    .@{form-item-prefix-cls}-label[class*='-24 '] + .@{form-item-prefix-cls}-control {
+      min-width: unset;
+    }
+  }
+}
+
+.reset-form{
+  margin: 0;
+    padding:0;
+    line-height:inherit;
+    vertical-align: middle;
+    color:inherit;
+    background-color: transparent;
+    box-shadow: none;
+    appearance: none;
+    border:0;
+    outline:0;
+    border-radius:0;
+    resize: none;
+}

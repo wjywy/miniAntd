@@ -59,6 +59,7 @@
     "@typescript-eslint/parser": "^5.49.0",
     "classnames": "^2.3.2",
     "cz": "^1.8.2",
+    "rc-field-form": "^1.27.4",
     "rc-progress": "^3.4.1"
   },
   "devDependencies": {
