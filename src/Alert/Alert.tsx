@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import React, { FC, useState } from 'react';
-import './style/index.less';
 
 export type AlertType = 'primary' | 'info' | 'success' | 'warning' | 'danger';
 

@@ -1,0 +1,72 @@
+// 一些共同的样式
+.basicBorder {
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 7px;
+    outline: none;
+    display: block;
+
+    &:hover {
+        border: 1px solid rgb(64, 150, 255);
+    }
+}
+
+// 基础的input
+.input_basic {
+    .basicBorder;
+
+    width: 30vw;
+    height: 32px;
+
+    &::placeholder {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+}
+
+// 输入框的尺寸
+
+.small {
+    height: 24px;
+}
+
+.large {
+    height: 40px;
+}
+
+// status的改变
+
+.error {
+    border: 1px solid #FF4D4F;
+
+    &:hover {
+        border: 1px solid #FF4D4F;
+    }
+}
+
+.warning {
+    border: 1px solid #FAAD14;
+
+    &:hover {
+        border: 1px solid #FAAD14;
+    }
+}
+
+// 无边框
+
+.noBorderd {
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+}
+
+// 文本域
+.input_area {
+    .basicBorder
+}
+
+// textarea原生样式的改变
+textarea {
+    padding: 0;
+}
