@@ -26,6 +26,7 @@ const InternalForm: React.ForwardRefRenderFunction<FormInstance, FormProps> = (
   React.useImperativeHandle(ref, () => wrapForm);
   const prefixCls = 'ci-form';
   const formClassName = classNames(
+    `${prefixCls}`,
     {
       [`${prefixCls}-${layout}`]: true,
       [`${prefixCls}-${size}`]: size,

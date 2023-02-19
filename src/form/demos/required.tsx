@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'cheesi';
 import * as React from 'react';
-function Base() {
+function Required() {
   const onFinish = (value: any) => {
     console.log(value);
   };
@@ -10,6 +10,8 @@ function Base() {
         <Form.Item
           name="username"
           label="用户名"
+          required={true}
+          hideRequired={true}
           rules={[
             { required: true, message: 'Please input username!' },
             {
@@ -23,6 +25,7 @@ function Base() {
         <Form.Item
           name="password"
           label="密码"
+          required={true}
           rules={[
             { required: true, message: 'Please input password!' },
             {
@@ -48,4 +51,4 @@ function Base() {
     </>
   );
 }
-export default Base;
+export default Required;

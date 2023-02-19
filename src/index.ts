@@ -1,4 +1,4 @@
-export { default as Alert } from './Alert';
+export { default as Alert } from './alert';
 export { Avatar, AvatarGroup } from './avatar';
 export { default as Breadcrumb } from './breadcrumb';
 export { default as Button } from './button';

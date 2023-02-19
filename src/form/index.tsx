@@ -1,3 +1,4 @@
+import '../style';
 import InternalForm from './form';
 import Item from './formItem';
 type InternalFormType = typeof InternalForm;

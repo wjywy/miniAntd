@@ -6,11 +6,12 @@ export default defineConfig({
   title: 'cheesi',
   themeConfig: {
     name: 'cheesi',
+    logo: '/logo.png',
   },
   resolve: {
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
-    entryFile:'./src/index.tsx' //这里是API表格解析入口
+    entryFile: './src/index.tsx', //这里是API表格解析入口
   },
   base: '/cheesi',
   publicPath: '/',

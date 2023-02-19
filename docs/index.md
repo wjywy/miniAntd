@@ -1,13 +1,13 @@
 ---
-title: library - 轻量级react组件库
+title: cheesi - 轻量级react组件库
 hero:
-  title: library
+  title: cheesi
   description: react组件库
   actions:
     - text: 指南
       link: /guide
     - text: GitHub
-      link: /
+      link: https://github.com/wjywy/miniAntd
 features:
   - title: 上手迅速
     emoji: 💎

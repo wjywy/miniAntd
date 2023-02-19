@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import Icon from '../Icon';
+import Icon from '../icon';
 import Circle from './circle';
 import Line from './line';
 import Steps from './steps';

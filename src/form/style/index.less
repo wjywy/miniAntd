@@ -1,8 +1,14 @@
 @form-prefix-cls: ~'ci-form';
+@form-item-prefix-cls:'@{form-prefix-cls}-item';
+
 
 .@{form-prefix-cls}{
-  .reset-form();
-  
+  .reset();
+
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // gap:20px;
   // ================================================================
   // =                             size                             =
   // ================================================================
@@ -25,6 +31,8 @@
     .formSize(@font-size-lg);
   }
 
+
+
   // ================================================================
   // =                             layout                           =
   // ================================================================
@@ -41,10 +49,36 @@
       min-width: unset;
     }
   }
+
+  // ================================================================
+  // =                             item                             =
+  // ================================================================
+  &-item{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    &-content{
+      flex:1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-label{
+      display: inline-block;
+      margin-right: .5em;
+    }
+  }
+  // ================================================================
+  // =                             status                           =
+  // ================================================================
+  &-required{
+    color:@danger
+  }
 }
 
-.reset-form{
-  margin: 0;
+.reset{
+    margin: 0;
     padding:0;
     line-height:inherit;
     vertical-align: middle;
@@ -56,4 +90,12 @@
     outline:0;
     border-radius:0;
     resize: none;
+}
+
+.ci-error-list{
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  color:@danger;
+  transition: all .5s;
 }
