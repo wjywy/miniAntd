@@ -1,9 +1,10 @@
 ---
-title: Menu
+title: Menu 菜单
 nav:
   title: '组件'
   path: /components
 ---
+# Menu 菜单
 
 为页面和功能提供导航的菜单列表。
 

@@ -27,11 +27,11 @@ export type SpinFCType = React.FC<SpinProps> & {
   setDefaultIndicator: (indicator: React.ReactNode) => void;
 };
 
-
 function renderIndicator(prefixCls: string, props: SpinProps): React.ReactNode {
   const { indicator } = props;
   const dotClassName = `${prefixCls}-dot`;
 
+  // should not be render default indicator when indicator value is null
   if (indicator === null) {
     return null;
   }
@@ -73,7 +73,6 @@ const Spin: React.FC<SpinProps> = (props) => {
       [`${prefixCls}-lg`]: size === 'large',
       [`${prefixCls}-spinning`]: spinning,
       [`${prefixCls}-show-text`]: !!tip,
-      // [`${prefixCls}-rtl`]: direction === 'rtl',
     },
     className,
   );

@@ -8,3 +8,4 @@ export { default as Icon } from './icon';
 export { default as Switch } from './switch';
 export { default as Menu } from './menu';
 export type { MenuItemProps, MenuProps, MenuTheme, SubMenuProps, MenuRef } from './menu';
+export { default as Spin } from './Spin';
