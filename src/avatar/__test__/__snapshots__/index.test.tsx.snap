@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render correctly 1`] = `
+<div
+  data-testid="Avatar"
+>
+  <div
+    class="avatar avatar-circle l-Avatar-md"
+  >
+    <span
+      style="font-size: 15.5px;"
+    >
+      hello
+    </span>
+  </div>
+  <div
+    class="avatar avatar-circle l-Avatar-md"
+  >
+    <span
+      style="font-size: 17.3px;"
+    >
+      wow
+    </span>
+  </div>
+  <div
+    class="avatar avatar-circle l-Avatar-md"
+    style="color: rgb(245, 106, 0); background-color: rgb(253, 227, 207);"
+  >
+    <span
+      style="font-size: 13.7px;"
+    >
+      chessui
+    </span>
+  </div>
+</div>
+`;

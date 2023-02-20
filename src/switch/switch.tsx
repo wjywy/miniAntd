@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { FC, useRef, useState } from 'react';
+import React,{ FC,useRef,useState } from 'react';
 export type SwitchSize = 'md' | 'sm';
 
 interface BaseSwitchProps {
@@ -10,6 +10,7 @@ interface BaseSwitchProps {
   className?: string;
   checkedColor?: string;
   // uncheckedChildren?: React.ReactNode;
+  
 }
 
 export type SwitchProps = Partial<BaseSwitchProps>;
@@ -21,6 +22,7 @@ const Switch: FC<SwitchProps> = ({
   className,
   checkedColor,
   // uncheckedChildren,
+  ...restProps
 }) => {
   const classes = classNames('switch', className, {
     [`l-switch-${size}`]: size,
@@ -59,6 +61,7 @@ const Switch: FC<SwitchProps> = ({
           ? { cursor: 'not-allowed', opacity: 0.65, background: checkedColor } //禁用的话,设置透明度
           : { background: checkedColor }
       }
+      {...restProps}
     >
       {/* {res ? (checkedChildren===null?null:<span>{checkedChildren}</span>):null} */}
       <div className="circle" ref={cirRef}></div>

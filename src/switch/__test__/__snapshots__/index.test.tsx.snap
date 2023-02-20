@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render correctly 1`] = `
+<div
+  data-testid="switch"
+>
+  <div
+    class="switch l-switch-md"
+    style="background: rgb(24, 144, 255);"
+  >
+    <div
+      class="circle"
+    />
+  </div>
+</div>
+`;
+
+exports[`Switch should render correctly 1`] = `
+<div
+  data-testid="switch"
+>
+  <div
+    class="switch l-switch-md"
+    style="background: rgb(24, 144, 255);"
+  >
+    <div
+      class="circle"
+    />
+  </div>
+</div>
+`;

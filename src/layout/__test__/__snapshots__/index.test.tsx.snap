@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render correctly 1`] = `
+<div
+  data-testid="Layout"
+>
+  <div
+    class="Layout-column"
+  >
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      header
+    </div>
+    <div
+      class="content"
+      style="background: rgb(16, 142, 233); height: 120px; color: white; text-align: center; line-height: 120px;"
+    >
+      content
+    </div>
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      footer
+    </div>
+  </div>
+  <br />
+  <div
+    class="Layout-column"
+  >
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      header
+    </div>
+    <div
+      class="Layout-row"
+    >
+      <div
+        style="background: rgb(59, 160, 233); width: 120px; color: white; text-align: center; line-height: 120px;"
+      >
+        sider
+      </div>
+      <div
+        class="content"
+        style="background: rgb(16, 142, 233); height: 120px; color: white; text-align: center; line-height: 120px;"
+      >
+        content
+      </div>
+    </div>
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      footer
+    </div>
+  </div>
+  <br />
+  <div
+    class="Layout-column"
+  >
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      header
+    </div>
+    <div
+      class="Layout-row"
+    >
+      <div
+        class="content"
+        style="background: rgb(16, 142, 233); height: 120px; color: white; text-align: center; line-height: 120px;"
+      >
+        content
+      </div>
+      <div
+        style="background: rgb(59, 160, 233); width: 120px; color: white; text-align: center; line-height: 120px;"
+      >
+        sider
+      </div>
+    </div>
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      footer
+    </div>
+  </div>
+  <br />
+  <div
+    class="Layout-row"
+  >
+    <div
+      style="background: rgb(59, 160, 233); width: 120px; color: white; text-align: center; line-height: 120px;"
+    >
+      sider
+    </div>
+    <div
+      class="Layout-column"
+    >
+      <div
+        style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+      >
+        header
+      </div>
+      <div
+        class="content"
+        style="background: rgb(16, 142, 233); height: 120px; color: white; text-align: center; line-height: 120px;"
+      >
+        content
+      </div>
+      <div
+        style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+      >
+        footer
+      </div>
+    </div>
+  </div>
+  <br />
+  <span>
+    实例
+  </span>
+  <div
+    class="Layout-column"
+  >
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      <ul
+        class="layout-test"
+      >
+        <li>
+          nav1
+        </li>
+        <li>
+          nav2
+        </li>
+        <li>
+          nav3
+        </li>
+        <li>
+          nav4
+        </li>
+        <li>
+          nav5
+        </li>
+      </ul>
+    </div>
+    <div
+      class="content"
+      style="background: rgb(16, 142, 233); height: 120px; color: white; text-align: center; line-height: 120px;"
+    >
+      content
+    </div>
+    <div
+      style="background: rgb(125, 188, 234); height: 64px; color: white; text-align: center; line-height: 64px;"
+    >
+      footer
+    </div>
+  </div>
+</div>
+`;
