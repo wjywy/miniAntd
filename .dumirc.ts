@@ -13,6 +13,7 @@ export default defineConfig({
     atomDirs: [{ type: 'component', dir: 'src' }],
     entryFile: './src/index.tsx', //这里是API表格解析入口
   },
+  favicons: ['/logo.png'],
   base: '/cheesi',
   publicPath: '/',
   exportStatic: {},

@@ -3,8 +3,9 @@ import { Field } from 'rc-field-form';
 import type { FieldProps } from 'rc-field-form/lib/Field';
 import type { Meta, Rule } from 'rc-field-form/lib/interface';
 import * as React from 'react';
+import omit from '../utils/omit';
 import ErrorList from './errorList';
-
+import { FormContext } from './form';
 import FormItemLabel from './formItemLabel';
 
 interface FormItemProps<T = any> extends FieldProps<T> {
@@ -12,20 +13,22 @@ interface FormItemProps<T = any> extends FieldProps<T> {
   className?: string;
   required?: boolean; // 是否必需
   hideRequired?: boolean; // 是否隐藏required图标
+  noStyle?: boolean;
 }
 
 const FormItem: React.FC<FormItemProps> = (props) => {
+  const FormContextValue = React.useContext(FormContext);
+  const { colon } = FormContextValue;
   const {
-    label,
     children,
     className = '',
-    required,
     hideRequired = false,
+    noStyle = FormContextValue.noStyle || false,
     ...resetProps
   } = props;
-  let { rules = [] } = props;
+  let { rules = [], required = true, label } = props;
 
-  let requireDom;
+  let requireDom = true;
   const rulesHasRequired = (rules: Rule[]) => {
     for (const x of rules) {
       if ((x as any).required !== undefined) {
@@ -34,26 +37,29 @@ const FormItem: React.FC<FormItemProps> = (props) => {
     }
     return false;
   };
-
   if (required === true) {
+    requireDom = true;
     let name = props.name || 'info';
-    if (rules === undefined) rules = [];
     if (rulesHasRequired(rules) === false) {
       rules.push({ required: true, message: `${name} is required!` });
     }
-    if (hideRequired === true) requireDom = null;
-    else requireDom = <span className="ci-form-required">*</span>;
+    if (hideRequired === true) requireDom = false;
+    else requireDom = true;
   } else {
+    requireDom = false;
     if (rulesHasRequired(rules) === true) {
+      required = true;
     }
   }
 
   let variables: Record<string, string> = {};
+  if (label === undefined && props.name) label = props.name;
   if (typeof label === 'string') {
     variables.label = label;
   }
 
-  const fieldClassname = classNames(className, 'ci-form-item');
+  const fieldClassname =
+    noStyle === false ? classNames(className, 'ci-form-item') : undefined;
 
   function genEmptyMeta(): Meta_ {
     return {
@@ -77,13 +83,20 @@ const FormItem: React.FC<FormItemProps> = (props) => {
   return (
     <Field
       messageVariables={variables}
-      {...resetProps}
+      {...omit(resetProps, ['rules', 'required', 'label'])}
       onMetaChange={onMetaChange}
+      rules={rules}
     >
       <div>
         <div className={fieldClassname}>
-          {requireDom}
-          {label && <FormItemLabel {...props}></FormItemLabel>}
+          {label && (
+            <FormItemLabel
+              {...props}
+              requireDom={requireDom}
+              colon={colon}
+              label={label}
+            ></FormItemLabel>
+          )}
           {children && <div className="ci-form-item-content">{children}</div>}
         </div>
         {<ErrorList message={meta.errors[0]} show={Boolean(meta.errors[0])} />}

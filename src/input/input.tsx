@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
-import './style/index.less';
+import { SizeContext } from '../context';
 
 export interface BasicInputProps {
   placeholder?: string;
-  size?: 'large' | 'small';
+  size?: 'large' | 'small' | 'middle';
   status?: 'error' | 'warning';
   borderd?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -19,9 +19,12 @@ const App: React.FC<BasicInputProps> = ({
   onChange,
   onFocus,
 }) => {
+  const sizeContextValue = React.useContext(SizeContext);
+  size = size || sizeContextValue?.size || 'small';
   const classes = classNames('input_basic', {
     large: size === 'large',
     small: size === 'small',
+    middle: size === 'middle',
     default: !size,
 
     warning: status === 'warning',

@@ -1,6 +1,6 @@
 import { Button, Form, Input } from 'cheesi';
 import * as React from 'react';
-function Base() {
+function No_Style() {
   const onFinish = (value: any) => {
     console.log(value);
   };
@@ -8,6 +8,7 @@ function Base() {
     <>
       <Form onFinish={onFinish} validateTrigger={['onBlur', 'onChange']}>
         <Form.Item
+          // noStyle
           name="username"
           label="用户名"
           rules={[
@@ -22,7 +23,8 @@ function Base() {
         </Form.Item>
         <Form.Item
           name="password"
-          label="密 码"
+          noStyle
+          label="密码"
           rules={[
             { required: true, message: 'Please input password!' },
             {
@@ -48,4 +50,4 @@ function Base() {
     </>
   );
 }
-export default Base;
+export default No_Style;

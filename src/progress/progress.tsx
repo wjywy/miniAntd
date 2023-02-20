@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import Icon from '../icon';
+import omit from '../utils/omit';
 import Circle from './circle';
 import Line from './line';
 import Steps from './steps';
@@ -95,7 +96,7 @@ const Progress: React.FC<ProgressProps> = (props: ProgressProps) => {
   } as React.CSSProperties;
   return (
     <div
-      {...restProps}
+      {...omit(restProps, ['trailColor', 'format', 'style', 'strokeLinecap'])}
       className={classString}
       style={type === 'circle' ? circleStyle : {}}
     >

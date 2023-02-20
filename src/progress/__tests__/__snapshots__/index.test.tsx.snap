@@ -28,7 +28,6 @@ exports[`Progress render normal progress 1`] = `
 exports[`Progress render trailColor progress 1`] = `
 <div
   class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
-  trailcolor="#ffffff"
 >
   <div
     class="ci-pg-outer"
@@ -55,7 +54,6 @@ exports[`Progress render trailColor progress 1`] = `
 exports[`Progress should render correct strokeLinecap 1`] = `
 <div
   class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
-  stroke-linecap="butt"
   style="width: 120px; height: 120px; font-size: 24px;"
 >
   <div
@@ -100,7 +98,6 @@ exports[`Progress should render correct strokeLinecap 1`] = `
 exports[`Progress should render correct strokeLinecap 2`] = `
 <div
   class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
-  stroke-linecap="round"
   style="width: 120px; height: 120px; font-size: 24px;"
 >
   <div
@@ -388,7 +385,6 @@ exports[`Progress should render trail color 1`] = `
 <div
   class="ci-pg-circle ci-pg-status-normal ci-pg-show-info ci-pg-default"
   style="width: 120px; height: 120px; font-size: 24px;"
-  trailcolor="red"
 >
   <div
     class="ci-pg-inner"
@@ -434,7 +430,6 @@ exports[`Progress should render trail color 2`] = `
 <div
   class="ci-pg-line ci-pg-status-normal ci-pg-show-info ci-pg-default"
   style=""
-  trailcolor="red"
 >
   <div
     class="ci-pg-outer"

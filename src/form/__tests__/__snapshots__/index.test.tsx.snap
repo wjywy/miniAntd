@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form show different size 1`] = `
+<form
+  class="ci-form ci-form-horizontal ci-form-small"
+>
+  <div
+    value="bamboo"
+  >
+    <div
+      class="ci-form-item"
+    >
+      <label
+        class="ci-form-item-label ci-form-item-label-required"
+        title="test"
+      >
+        test
+        :
+      </label>
+      <div
+        class="ci-form-item-content"
+      >
+        <input
+          class="input_basic small normal"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="ci-error-list"
+      role="alert"
+      style="opacity: 0;"
+    />
+  </div>
+</form>
+`;
+
+exports[`Form show different size 2`] = `
+<form
+  class="ci-form ci-form-horizontal ci-form-large"
+>
+  <div
+    value="bamboo"
+  >
+    <div
+      class="ci-form-item"
+    >
+      <label
+        class="ci-form-item-label ci-form-item-label-required"
+        title="test"
+      >
+        test
+        :
+      </label>
+      <div
+        class="ci-form-item-content"
+      >
+        <input
+          class="input_basic large normal"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="ci-error-list"
+      role="alert"
+      style="opacity: 0;"
+    />
+  </div>
+</form>
+`;
+
+exports[`Form show require icon when required is true or rules contain required 1`] = `
+<form
+  class="ci-form ci-form-horizontal ci-form-small"
+>
+  <div
+    value="bamboo"
+  >
+    <div
+      class="ci-form-item"
+    >
+      <label
+        class="ci-form-item-label ci-form-item-label-required"
+        title="test"
+      >
+        test
+        :
+      </label>
+      <div
+        class="ci-form-item-content"
+      >
+        <input
+          class="input_basic small normal"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="ci-error-list"
+      role="alert"
+      style="opacity: 0;"
+    />
+  </div>
+</form>
+`;

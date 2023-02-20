@@ -1,5 +1,5 @@
 @form-prefix-cls: ~'ci-form';
-@form-item-prefix-cls:'@{form-prefix-cls}-item';
+@form-item-prefix-cls:~'@{form-prefix-cls}-item';
 
 
 .@{form-prefix-cls}{
@@ -9,44 +9,28 @@
   flex-direction: column;
   // align-items: center;
   // gap:20px;
-  // ================================================================
-  // =                             size                             =
-  // ================================================================
-
-  .formSize(@input-height) {
-    .@{form-item-prefix-cls}-label > label {
-      height: @input-height;
-    }
-
-    .@{form-item-prefix-cls}-control-input {
-      min-height: @input-height;
-    }
-  }
-
-  &-small {
-    .formSize(@font-size-sm);
-  }
-
-  &-large {
-    .formSize(@font-size-lg);
-  }
-
 
 
   // ================================================================
   // =                             layout                           =
   // ================================================================
-  &-horizontal{
-    .@{form-item-prefix-cls}-label {
-      flex-grow: 0;
+  &-vertical{
+    .@{form-item-prefix-cls}{
+      display: block;
     }
-    .@{form-item-prefix-cls}-control {
-      flex: 1 1 0;
-      min-width: 0;
-    }
-    .@{form-item-prefix-cls}-label[class$='-24'] + .@{form-item-prefix-cls}-control,
-    .@{form-item-prefix-cls}-label[class*='-24 '] + .@{form-item-prefix-cls}-control {
-      min-width: unset;
+  }
+
+  &-inline{
+    // .@{form-item-prefix-cls}{
+    //   display: inline-flex;
+    // }
+    flex-direction: row;
+    align-items: center;
+
+    &>div {
+      display: flex;
+      align-items: center;
+      gap:10px;
     }
   }
 
@@ -67,14 +51,45 @@
     &-label{
       display: inline-block;
       margin-right: .5em;
+
+      &-required::before{
+        display: inline-block;
+        margin-inline-end: 4px;
+        color: @danger;
+        font-size: 14px;
+        font-family: SimSun,sans-serif;
+        line-height: 1;
+        content: "*"
+      }
     }
   }
   // ================================================================
   // =                             status                           =
   // ================================================================
   &-required{
-    color:@danger
+    color:@danger;
+    vertical-align: middle;
+    line-height: 1em;
   }
+
+    // ================================================================
+  // =                             size                             =
+  // ================================================================
+
+  .formSize(@fontSize) {
+    .@{form-item-prefix-cls}{
+      font-size: @fontSize !important;
+    }
+  }
+
+  &-small {
+    .formSize(@font-size-sm);
+  }
+
+  &-large {
+    .formSize(@font-size-lg);
+  }
+
 }
 
 .reset{

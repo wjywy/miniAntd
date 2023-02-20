@@ -8,3 +8,5 @@ interface FormInterface extends InternalFormType {
 const Form = InternalForm as FormInterface;
 Form.Item = Item;
 export default Form as FormInterface;
+export * from './form';
+export * from './formItem';
