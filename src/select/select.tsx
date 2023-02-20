@@ -1,11 +1,11 @@
-import Icon from 'cheesi/icon';
+import Icon from '../icon';
 import React, { FC, useState } from 'react';
 
 interface optionType {
   title: string;
   value: number | string;
 }
-interface ISelectProps {
+export interface ISelectProps {
   defaultValue: number | string;
   options: optionType[];
   //   onChange: (e: any) => {};

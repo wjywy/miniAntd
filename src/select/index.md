@@ -4,7 +4,7 @@ nav:
   title: '组件'
   path: /components
 ---
-# Foo
+# Selector
 
 This is an example selector选择器.
 
