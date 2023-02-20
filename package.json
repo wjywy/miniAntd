@@ -58,7 +58,8 @@
   "dependencies": {
     "@typescript-eslint/parser": "^5.49.0",
     "classnames": "^2.3.2",
-    "cz": "^1.8.2"
+    "cz": "^1.8.2",
+    "rc-menu": "^9.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

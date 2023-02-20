@@ -6,3 +6,5 @@ export { default as Drawer } from './drawer';
 export { default as Foo } from './foo';
 export { default as Icon } from './icon';
 export { default as Switch } from './switch';
+export { default as Menu } from './menu';
+export type { MenuItemProps, MenuProps, MenuTheme, SubMenuProps, MenuRef } from './menu';
