@@ -20,3 +20,4 @@ nav:
 <!-- prettier-ignore -->
 
 <code src="./demos/inline.tsx">内嵌菜单</code>
+<code src="./demos/horizontal.tsx">水平菜单</code>

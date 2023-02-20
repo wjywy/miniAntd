@@ -1,5 +1,7 @@
+.spin{
+  margin-top: 10px;
+  
 .spin-dot {
-  // 水平垂直居中
   display: block;
   position: relative;
   top: calc(50% - 18px);
@@ -57,5 +59,26 @@
     bottom: 0;
     left: 0;
     animation-delay: 1.2s;
+  }
+}
+}
+
+.spin-sm .spin-dot{
+  width: 20px;
+  height: 20px;
+
+  .spin-dot-item {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+.spin-lg .spin-dot{
+  width: 45px;
+  height: 45px;
+
+  .spin-dot-item {
+    width: 14px;
+    height: 14px;
   }
 }

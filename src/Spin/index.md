@@ -10,5 +10,6 @@ nav:
 
 ## 基本类型
 
-<code src="./demos/basic.tsx"></code>
+<code src="./demos/basic.tsx">基本用法</code>
+<code src="./demos/size.tsx">各种大小</code>
 
