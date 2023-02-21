@@ -17,5 +17,6 @@
       "cheesi/*": ["src/*", "*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "typings","src/tests","src/*/__tests__/**"]
 }

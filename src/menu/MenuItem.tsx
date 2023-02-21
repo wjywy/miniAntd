@@ -58,15 +58,17 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
         )}
         title={typeof title === 'string' ? title : undefined}
       >
-        {icon
-          ? cloneElement(icon as React.ReactElement, {
-              className: classNames(
-                isValidElement(icon) ? icon.props?.className : '',
-                `${prefixCls}-item-icon`,
-              ),
-            })
-          : icon}
-        {renderItemChildren(isInlineCollapsed)}
+        <>
+          {icon
+            ? cloneElement(icon as React.ReactElement, {
+                className: classNames(
+                  isValidElement(icon) ? icon.props?.className : '',
+                  `${prefixCls}-item-icon`,
+                ),
+              })
+            : icon}
+          {renderItemChildren(isInlineCollapsed)}
+        </>
       </Item>
     </>
   );

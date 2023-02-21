@@ -13,5 +13,5 @@
     }
   },
   // "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
-  "exclude": ["node_modules", "dist", "typings"]
+  "exclude": ["node_modules", "dist", "typings","src/tests","src/*/__tests__/**"]
 }

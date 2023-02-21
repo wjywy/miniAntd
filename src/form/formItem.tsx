@@ -97,7 +97,11 @@ const FormItem: React.FC<FormItemProps> = (props) => {
               label={label}
             ></FormItemLabel>
           )}
-          {children && <div className="ci-form-item-content">{children}</div>}
+          {children && (
+            <div className="ci-form-item-content">
+              <>{children}</>
+            </div>
+          )}
         </div>
         {<ErrorList message={meta.errors[0]} show={Boolean(meta.errors[0])} />}
       </div>

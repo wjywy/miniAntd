@@ -44,7 +44,11 @@ const App = () => (
       <Breadcrumb.Item href="http://www.baidu.com" separator="/">
         Home
       </Breadcrumb.Item>
-      <Breadcrumb.Item href="http://www.baidu.com" separator="/" menu={items}>
+      <Breadcrumb.Item
+        href="http://www.baidu.com"
+        separator="/"
+        menu={<>{items}</>}
+      >
         Left
       </Breadcrumb.Item>
       <Breadcrumb.Item href="http://www.baidu.com" separator="/">
