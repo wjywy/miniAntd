@@ -1,58 +1,101 @@
 import React, { useState } from 'react';
+import './style/index.less';
 
-interface TableProps {
-  headers: string[];
-  data: Array<{ [key: string]: any }>;
-  sortable?: boolean;
+export interface Column {
+  key: string;
+  title: string;
 }
 
-const Table: React.FC<TableProps> = ({ headers, data, sortable = false }) => {
-  const [sortBy, setSortBy] = useState<string | null>(null);
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc' | null>(null);
+export interface Record {
+  key: string;
+  [key: string]: any;
+}
 
-  const handleSort = (header: string) => {
-    if (sortBy === header) {
-      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+export interface Props {
+  columns: Column[];
+  data: Record[];
+}
+
+const Table: React.FC<Props> = ({ columns, data }) => {
+  const [selectedRowKeys, setSelectedRowKeys] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSelectRow = (record: Record) => {
+    const keys = [...selectedRowKeys];
+    const index = keys.indexOf(record.key);
+    if (index === -1) {
+      keys.push(record.key);
     } else {
-      setSortBy(header);
-      setSortOrder('asc');
+      keys.splice(index, 1);
     }
+    setSelectedRowKeys(keys);
   };
 
-  const sortedData = data.sort((a, b) => {
-    if (sortOrder === 'asc') {
-      return a[sortBy as string] > b[sortBy as string] ? 1 : -1;
-    }
-    return a[sortBy as string] < b[sortBy as string] ? 1 : -1;
-  });
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
 
-  return (
-    <table>
+  const getFilteredData = () => {
+    if (!searchQuery) {
+      return data;
+    }
+    return data.filter((record) => {
+      for (const column of columns) {
+        const value = record[column.key].toString();
+        if (value.toLowerCase().includes(searchQuery.toLowerCase())) {
+          return true;
+        }
+      }
+      return false;
+    });
+  };
+
+  const getTableHead = () => {
+    return (
       <thead>
         <tr>
-          {headers.map((header, index) => (
-            <th key={index}>
-              {sortable ? (
-                <button onClick={() => handleSort(header)}>
-                  {header} {sortBy === header && (sortOrder === 'asc' ? '⬆️' : '⬇️')}
-                </button>
-              ) : (
-                header
-              )}
-            </th>
+          {columns.map((column) => (
+            <th key={column.key}>{column.title}</th>
           ))}
         </tr>
       </thead>
+    );
+  };
+
+  const getTableBody = () => {
+    const filteredData = getFilteredData();
+    return (
       <tbody>
-        {sortedData.map((row, index) => (
-          <tr key={index}>
-            {headers.map((header, headerIndex) => (
-              <td key={headerIndex}>{row[header]}</td>
+        {filteredData.map((record) => (
+          <tr
+            key={record.key}
+            className={selectedRowKeys.includes(record.key) ? 'selected' : ''}
+            onClick={() => handleSelectRow(record)}
+          >
+            {columns.map((column) => (
+              <td key={`${record.key}-${column.key}`}>{record[column.key]}</td>
             ))}
           </tr>
         ))}
       </tbody>
-    </table>
+    );
+  };
+
+  return (
+    <div className="TableContainer">
+      <div className="SearchContainer">
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchQuery}
+          onChange={handleSearch}
+        />
+      </div>
+      <table className="Table">
+        {getTableHead()}
+        {getTableBody()}
+      </table>
+    </div>
   );
 };
 
