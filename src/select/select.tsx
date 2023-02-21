@@ -42,7 +42,6 @@ const Selector: FC<ISelectProps> = ({ defaultValue, options }) => {
                   setIfSelect(true);
                   setValue(item.title);
                   setIsOnFocus(false);
-                  console.log(1);
                 }}
               >
                 {item.title}
