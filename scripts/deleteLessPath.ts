@@ -1,7 +1,7 @@
 // 编译出的js 是包括引入less的，但是用户应该先全局引入，而且tsc不会帮我们转换路径，所以在组件里就不要引入了，删掉。
 import * as fs from 'fs';
 import * as path from 'path';
-const delete_dir = ['style', 'demos'];
+const delete_dir = ['style', 'demos', '__tests__', 'tests'];
 const deleteDir = (startDir: string) => {
   const dir = fs.readdirSync(startDir);
   for (let file of dir) {
