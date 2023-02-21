@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spin should render correctly 1`] = `
+<div
+  aria-busy="true"
+  aria-live="polite"
+  class="spin spin-spinning"
+  data-testid="Spin"
+>
+  <span
+    class="spin-dot spin-dot-spin"
+  >
+    <i
+      class="spin-dot-item"
+    />
+    <i
+      class="spin-dot-item"
+    />
+    <i
+      class="spin-dot-item"
+    />
+    <i
+      class="spin-dot-item"
+    />
+  </span>
+</div>
+`;

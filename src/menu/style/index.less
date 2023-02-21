@@ -1,0 +1,1086 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.cheesi-menu-item-danger.cheesi-menu-item {
+    color: #ff4d4f;
+  }
+
+  .cheesi-menu-item-danger.cheesi-menu-item:hover,
+  .cheesi-menu-item-danger.cheesi-menu-item-active {
+    color: #ff4d4f;
+  }
+
+  .cheesi-menu-item-danger.cheesi-menu-item:active {
+    background: #fff1f0;
+  }
+
+  .cheesi-menu-item-danger.cheesi-menu-item-selected {
+    color: #ff4d4f;
+  }
+
+  .cheesi-menu-item-danger.cheesi-menu-item-selected > a,
+  .cheesi-menu-item-danger.cheesi-menu-item-selected > a:hover {
+    color: #ff4d4f;
+  }
+
+  .cheesi-menu:not(.cheesi-menu-horizontal) .cheesi-menu-item-danger.cheesi-menu-item-selected {
+    background-color: #fff1f0;
+  }
+
+  .cheesi-menu-inline .cheesi-menu-item-danger.cheesi-menu-item::after {
+    border-right-color: #ff4d4f;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-danger.cheesi-menu-item,
+  .cheesi-menu-dark .cheesi-menu-item-danger.cheesi-menu-item:hover,
+  .cheesi-menu-dark .cheesi-menu-item-danger.cheesi-menu-item > a {
+    color: #ff4d4f;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-dark:not(.cheesi-menu-horizontal) .cheesi-menu-item-danger.cheesi-menu-item-selected {
+    color: #fff;
+    background-color: #ff4d4f;
+  }
+
+  .cheesi-menu {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    font-feature-settings: 'tnum';
+    margin-bottom: 0;
+    padding-left: 0;
+    color: rgba(0, 0, 0, 85%);
+    font-size: 14px;
+    line-height: 0;
+    text-align: left;
+    list-style: none;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 12%), 0 6px 16px 0 rgba(0, 0, 0, 8%), 0 9px 28px 8px rgba(0, 0, 0, 5%);
+    transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+
+    .cheesi-menu-root:focus-visible {
+        box-shadow: 0 0 0 2px #bae7ff;
+    }
+  }
+
+  .cheesi-menu::before {
+    display: table;
+    content: '';
+  }
+
+  .cheesi-menu::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  .cheesi-menu ul,
+  .cheesi-menu ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .cheesi-menu-overflow {
+    display: flex;
+  }
+
+  .cheesi-menu-overflow-item {
+    flex: none;
+  }
+
+  .cheesi-menu-hidden,
+  .cheesi-menu-submenu-hidden {
+    display: none;
+  }
+
+  .cheesi-menu-item-group-title {
+    height: 1.5715;
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 45%);
+    font-size: 14px;
+    line-height: 1.5715;
+    transition: all 0.3s;
+  }
+
+  .cheesi-menu-horizontal .cheesi-menu-submenu {
+    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-submenu,
+  .cheesi-menu-submenu-inline {
+    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-submenu-selected {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-item:active,
+  .cheesi-menu-submenu-title:active {
+    background: #e6f7ff;
+  }
+
+  .cheesi-menu-submenu .cheesi-menu-sub {
+    cursor: initial;
+    transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-title-content {
+    transition: color 0.3s;
+  }
+
+  .cheesi-menu-item a {
+    color: rgba(0, 0, 0, 85%);
+  }
+
+  .cheesi-menu-item a:hover {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-item a::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    content: '';
+  }
+
+  .cheesi-menu-item > .cheesi-badge a {
+    color: rgba(0, 0, 0, 85%);
+  }
+
+  .cheesi-menu-item > .cheesi-badge a:hover {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-item-divider {
+    overflow: hidden;
+    line-height: 0;
+    border-color: #f0f0f0;
+    border-style: solid;
+    border-width: 1px 0 0;
+  }
+
+  .cheesi-menu-item-divider-dashed {
+    border-style: dashed;
+  }
+
+  .cheesi-menu-horizontal .cheesi-menu-item,
+  .cheesi-menu-horizontal .cheesi-menu-submenu {
+    margin-top: -1px;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item:hover,
+  .cheesi-menu-horizontal > .cheesi-menu-item-active,
+  .cheesi-menu-horizontal > .cheesi-menu-submenu .cheesi-menu-submenu-title:hover {
+    background-color: transparent;
+  }
+
+  .cheesi-menu-item-selected {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-item-selected a,
+  .cheesi-menu-item-selected a:hover {
+    color: #1890ff;
+  }
+
+  .cheesi-menu:not(.cheesi-menu-horizontal) .cheesi-menu-item-selected {
+    background-color: #e6f7ff;
+  }
+
+  .cheesi-menu-inline,
+  .cheesi-menu-vertical,
+  .cheesi-menu-vertical-left {
+    border-right: 1px solid #f0f0f0;
+  }
+
+  .cheesi-menu-vertical-right {
+    border-left: 1px solid #f0f0f0;
+  }
+
+  .cheesi-menu-vertical.cheesi-menu-sub,
+  .cheesi-menu-vertical-left.cheesi-menu-sub,
+  .cheesi-menu-vertical-right.cheesi-menu-sub {
+    min-width: 160px;
+    max-height: calc(100vh - 100px);
+    padding: 0;
+    overflow: hidden;
+    border-right: 0;
+  }
+
+  .cheesi-menu-vertical.cheesi-menu-sub:not([class*='-active']),
+  .cheesi-menu-vertical-left.cheesi-menu-sub:not([class*='-active']),
+  .cheesi-menu-vertical-right.cheesi-menu-sub:not([class*='-active']) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .cheesi-menu-vertical.cheesi-menu-sub .cheesi-menu-item,
+  .cheesi-menu-vertical-left.cheesi-menu-sub .cheesi-menu-item,
+  .cheesi-menu-vertical-right.cheesi-menu-sub .cheesi-menu-item {
+    left: 0;
+    margin-left: 0;
+    border-right: 0;
+  }
+
+  .cheesi-menu-vertical.cheesi-menu-sub .cheesi-menu-item::after,
+  .cheesi-menu-vertical-left.cheesi-menu-sub .cheesi-menu-item::after,
+  .cheesi-menu-vertical-right.cheesi-menu-sub .cheesi-menu-item::after {
+    border-right: 0;
+  }
+
+  .cheesi-menu-vertical.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-vertical-left.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-vertical-right.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-vertical.cheesi-menu-sub > .cheesi-menu-submenu,
+  .cheesi-menu-vertical-left.cheesi-menu-sub > .cheesi-menu-submenu,
+  .cheesi-menu-vertical-right.cheesi-menu-sub > .cheesi-menu-submenu {
+    transform-origin: 0 0;
+  }
+
+  .cheesi-menu-horizontal.cheesi-menu-sub {
+    min-width: 114px;
+  }
+
+  .cheesi-menu-horizontal .cheesi-menu-item,
+  .cheesi-menu-horizontal .cheesi-menu-submenu-title {
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .cheesi-menu-item,
+  .cheesi-menu-submenu-title {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: border-color 0.3s, background 0.3s, padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-item .cheesi-menu-item-icon,
+  .cheesi-menu-submenu-title .cheesi-menu-item-icon,
+  .cheesi-menu-item .anticon,
+  .cheesi-menu-submenu-title .anticon {
+    min-width: 14px;
+    font-size: 14px;
+    transition: font-size 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), margin 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.3s;
+  }
+
+  .cheesi-menu-item .cheesi-menu-item-icon + span,
+  .cheesi-menu-submenu-title .cheesi-menu-item-icon + span,
+  .cheesi-menu-item .anticon + span,
+  .cheesi-menu-submenu-title .anticon + span {
+    margin-left: 10px;
+    opacity: 1;
+    transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), margin 0.3s, color 0.3s;
+  }
+
+  .cheesi-menu-item .cheesi-menu-item-icon.svg,
+  .cheesi-menu-submenu-title .cheesi-menu-item-icon.svg {
+    vertical-align: -0.125em;
+  }
+
+  .cheesi-menu-item.cheesi-menu-item-only-child > .anticon,
+  .cheesi-menu-submenu-title.cheesi-menu-item-only-child > .anticon,
+  .cheesi-menu-item.cheesi-menu-item-only-child > .cheesi-menu-item-icon,
+  .cheesi-menu-submenu-title.cheesi-menu-item-only-child > .cheesi-menu-item-icon {
+    margin-right: 0;
+  }
+
+  .cheesi-menu-item:not(.cheesi-menu-item-disabled):focus-visible,
+  .cheesi-menu-submenu-title:not(.cheesi-menu-item-disabled):focus-visible {
+    box-shadow: 0 0 0 2px #bae7ff;
+  }
+
+  .cheesi-menu > .cheesi-menu-item-divider {
+    margin: 1px 0;
+    padding: 0;
+  }
+
+  .cheesi-menu-submenu-popup {
+    position: absolute;
+    z-index: 1050;
+    background: transparent;
+    border-radius: 2px;
+    box-shadow: none;
+    transform-origin: 0 0;
+  }
+
+  .cheesi-menu-submenu-popup::before {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0001;
+    content: ' ';
+  }
+
+  .cheesi-menu-submenu-placement-rightTop::before {
+    top: 0;
+    left: -7px;
+  }
+
+  .cheesi-menu-submenu > .cheesi-menu {
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  .cheesi-menu-submenu > .cheesi-menu-submenu-title::after {
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-submenu-popup > .cheesi-menu {
+    background-color: #fff;
+  }
+
+  .cheesi-menu-submenu-expand-icon,
+  .cheesi-menu-submenu-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 10px;
+    color: rgba(0, 0, 0, 85%);
+    transform: translateY(-50%);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-submenu-arrow::after {
+    position: absolute;
+    width: 6px;
+    height: 1.5px;
+    background-color: currentcolor;
+    border-radius: 2px;
+    transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    content: '';
+  }
+
+  .cheesi-menu-submenu-arrow::before {
+    transform: rotate(45deg) translateY(-2.5px);
+  }
+
+  .cheesi-menu-submenu-arrow::after {
+    transform: rotate(-45deg) translateY(2.5px);
+  }
+
+  .cheesi-menu-submenu:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-expand-icon,
+  .cheesi-menu-submenu:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-inline-collapsed .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-submenu-inline .cheesi-menu-submenu-arrow::before {
+    transform: rotate(-45deg) translateX(2.5px);
+  }
+
+  .cheesi-menu-inline-collapsed .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-submenu-inline .cheesi-menu-submenu-arrow::after {
+    transform: rotate(45deg) translateX(-2.5px);
+  }
+
+  .cheesi-menu-submenu-horizontal .cheesi-menu-submenu-arrow {
+    display: none;
+  }
+
+  .cheesi-menu-submenu-open.cheesi-menu-submenu-inline > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow {
+    transform: translateY(-2px);
+  }
+
+  .cheesi-menu-submenu-open.cheesi-menu-submenu-inline > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after {
+    transform: rotate(-45deg) translateX(-2.5px);
+  }
+
+  .cheesi-menu-submenu-open.cheesi-menu-submenu-inline > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before {
+    transform: rotate(45deg) translateX(2.5px);
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-submenu-selected,
+  .cheesi-menu-vertical-left .cheesi-menu-submenu-selected,
+  .cheesi-menu-vertical-right .cheesi-menu-submenu-selected {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-horizontal {
+    line-height: 46px;
+    border: 0;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: none;
+  }
+
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu {
+    margin-top: -1px;
+    margin-bottom: 0;
+    padding: 0 20px;
+  }
+
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item:hover,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu:hover,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-active,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-active,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-open,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-open,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-selected,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-selected {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item:hover::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu:hover::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-active::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-active::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-open::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-open::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-item-selected::after,
+  .cheesi-menu-horizontal:not(.cheesi-menu-dark) > .cheesi-menu-submenu-selected::after {
+    border-bottom: 2px solid #1890ff;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item,
+  .cheesi-menu-horizontal > .cheesi-menu-submenu {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item::after,
+  .cheesi-menu-horizontal > .cheesi-menu-submenu::after {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    content: '';
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-submenu > .cheesi-menu-submenu-title {
+    padding: 0;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item a {
+    color: rgba(0, 0, 0, 85%);
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item a:hover {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item a::before {
+    bottom: -2px;
+  }
+
+  .cheesi-menu-horizontal > .cheesi-menu-item-selected a {
+    color: #1890ff;
+  }
+
+  .cheesi-menu-horizontal::after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: '\20';
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-item,
+  .cheesi-menu-vertical-left .cheesi-menu-item,
+  .cheesi-menu-vertical-right .cheesi-menu-item,
+  .cheesi-menu-inline .cheesi-menu-item {
+    position: relative;
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-item::after,
+  .cheesi-menu-vertical-left .cheesi-menu-item::after,
+  .cheesi-menu-vertical-right .cheesi-menu-item::after,
+  .cheesi-menu-inline .cheesi-menu-item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 3px solid #1890ff;
+    transform: scaleY(0.0001);
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    content: '';
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-item,
+  .cheesi-menu-vertical-left .cheesi-menu-item,
+  .cheesi-menu-vertical-right .cheesi-menu-item,
+  .cheesi-menu-inline .cheesi-menu-item,
+  .cheesi-menu-vertical .cheesi-menu-submenu-title,
+  .cheesi-menu-vertical-left .cheesi-menu-submenu-title,
+  .cheesi-menu-vertical-right .cheesi-menu-submenu-title,
+  .cheesi-menu-inline .cheesi-menu-submenu-title {
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0 16px;
+    overflow: hidden;
+    line-height: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-submenu,
+  .cheesi-menu-vertical-left .cheesi-menu-submenu,
+  .cheesi-menu-vertical-right .cheesi-menu-submenu,
+  .cheesi-menu-inline .cheesi-menu-submenu {
+    padding-bottom: 0.02px;
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-item:not(:last-child),
+  .cheesi-menu-vertical-left .cheesi-menu-item:not(:last-child),
+  .cheesi-menu-vertical-right .cheesi-menu-item:not(:last-child),
+  .cheesi-menu-inline .cheesi-menu-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .cheesi-menu-vertical > .cheesi-menu-item,
+  .cheesi-menu-vertical-left > .cheesi-menu-item,
+  .cheesi-menu-vertical-right > .cheesi-menu-item,
+  .cheesi-menu-inline > .cheesi-menu-item,
+  .cheesi-menu-vertical > .cheesi-menu-submenu > .cheesi-menu-submenu-title,
+  .cheesi-menu-vertical-left > .cheesi-menu-submenu > .cheesi-menu-submenu-title,
+  .cheesi-menu-vertical-right > .cheesi-menu-submenu > .cheesi-menu-submenu-title,
+  .cheesi-menu-inline > .cheesi-menu-submenu > .cheesi-menu-submenu-title {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .cheesi-menu-vertical .cheesi-menu-item-group-list .cheesi-menu-submenu-title,
+  .cheesi-menu-vertical .cheesi-menu-submenu-title {
+    padding-right: 34px;
+  }
+
+  .cheesi-menu-inline {
+    width: 100%;
+  }
+
+  .cheesi-menu-inline .cheesi-menu-selected::after,
+  .cheesi-menu-inline .cheesi-menu-item-selected::after {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .cheesi-menu-inline .cheesi-menu-item,
+  .cheesi-menu-inline .cheesi-menu-submenu-title {
+    width: calc(100% + 1px);
+  }
+
+  .cheesi-menu-inline .cheesi-menu-item-group-list .cheesi-menu-submenu-title,
+  .cheesi-menu-inline .cheesi-menu-submenu-title {
+    padding-right: 34px;
+  }
+
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-item,
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-submenu-title {
+    display: flex;
+    align-items: center;
+    transition: border-color 0.3s, background 0.3s, padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-item > .cheesi-menu-title-content,
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-submenu-title > .cheesi-menu-title-content {
+    flex: auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-item > *,
+  .cheesi-menu-inline.cheesi-menu-root .cheesi-menu-submenu-title > * {
+    flex: none;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed {
+    width: 80px;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title {
+    left: 0;
+    padding: 0 calc(50% - 16px / 2);
+    text-overflow: clip;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item .cheesi-menu-submenu-arrow,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item .cheesi-menu-submenu-arrow,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow {
+    opacity: 0;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item .anticon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item .anticon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title .anticon,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title .anticon {
+    margin: 0;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item .cheesi-menu-item-icon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item .cheesi-menu-item-icon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-item-icon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title .cheesi-menu-item-icon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item .anticon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-item .anticon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-item-group > .cheesi-menu-item-group-list > .cheesi-menu-submenu > .cheesi-menu-submenu-title .anticon + span,
+  .cheesi-menu.cheesi-menu-inline-collapsed > .cheesi-menu-submenu > .cheesi-menu-submenu-title .anticon + span {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed .anticon {
+    display: inline-block;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed-tooltip {
+    pointer-events: none;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed-tooltip .cheesi-menu-item-icon,
+  .cheesi-menu.cheesi-menu-inline-collapsed-tooltip .anticon {
+    display: none;
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed-tooltip a {
+    color: rgba(255, 255, 255, 85%);
+  }
+
+  .cheesi-menu.cheesi-menu-inline-collapsed .cheesi-menu-item-group-title {
+    padding-right: 4px;
+    padding-left: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .cheesi-menu-item-group-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cheesi-menu-item-group-list .cheesi-menu-item,
+  .cheesi-menu-item-group-list .cheesi-menu-submenu-title {
+    padding: 0 16px 0 28px;
+  }
+
+  .cheesi-menu-root.cheesi-menu-vertical,
+  .cheesi-menu-root.cheesi-menu-vertical-left,
+  .cheesi-menu-root.cheesi-menu-vertical-right,
+  .cheesi-menu-root.cheesi-menu-inline {
+    box-shadow: none;
+  }
+
+  .cheesi-menu-root.cheesi-menu-inline-collapsed .cheesi-menu-item > .cheesi-menu-inline-collapsed-noicon,
+  .cheesi-menu-root.cheesi-menu-inline-collapsed .cheesi-menu-submenu .cheesi-menu-submenu-title > .cheesi-menu-inline-collapsed-noicon {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .cheesi-menu-sub.cheesi-menu-inline {
+    padding: 0;
+    background: #fafafa;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    > .cheesi-menu-item,
+    > .cheesi-menu-submenu > .cheesi-menu-submenu-title {
+        height: 40px;
+        line-height: 40px;
+        list-style-position: inside;
+        list-style-type: disc;
+    }
+
+    .cheesi-menu-item-group-title {
+        padding-left: 32px;
+    }
+  }
+
+  .cheesi-menu-item-disabled,
+  .cheesi-menu-submenu-disabled {
+    color: rgba(0, 0, 0, 25%) !important;
+    background: none;
+    cursor: not-allowed;
+  }
+
+  .cheesi-menu-item-disabled::after,
+  .cheesi-menu-submenu-disabled::after {
+    border-color: transparent !important;
+  }
+
+  .cheesi-menu-item-disabled a,
+  .cheesi-menu-submenu-disabled a {
+    color: rgba(0, 0, 0, 25%) !important;
+    pointer-events: none;
+  }
+
+  .cheesi-menu-item-disabled > .cheesi-menu-submenu-title,
+  .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title {
+    color: rgba(0, 0, 0, 25%) !important;
+    cursor: not-allowed;
+  }
+
+  .cheesi-menu-item-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-item-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after {
+    background: rgba(0, 0, 0, 25%) !important;
+  }
+
+  .cheesi-layout-header .cheesi-menu {
+    line-height: inherit;
+  }
+
+  .cheesi-menu-inline-collapsed-tooltip a,
+  .cheesi-menu-inline-collapsed-tooltip a:hover {
+    color: #fff;
+  }
+
+  .cheesi-menu-light .cheesi-menu-item:hover,
+  .cheesi-menu-light .cheesi-menu-item-active,
+  .cheesi-menu-light .cheesi-menu:not(.cheesi-menu-inline) .cheesi-menu-submenu-open,
+  .cheesi-menu-light .cheesi-menu-submenu-active,
+  .cheesi-menu-light .cheesi-menu-submenu-title:hover {
+    color: #1890ff;
+  }
+
+  .cheesi-menu.cheesi-menu-root:focus-visible {
+    box-shadow: 0 0 0 2px #096dd9;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:focus-visible,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:focus-visible {
+    box-shadow: 0 0 0 2px #096dd9;
+  }
+
+  .cheesi-menu.cheesi-menu-dark,
+  .cheesi-menu-dark .cheesi-menu-sub,
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-sub {
+    color: rgba(255, 255, 255, 65%);
+    background: #001529;
+  }
+
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow {
+    opacity: 0.45;
+    transition: all 0.3s;
+  }
+
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-sub .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before {
+    background: #fff;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-submenu-popup {
+    background: transparent;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-inline.cheesi-menu-sub {
+    background: #000c17;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-horizontal {
+    border-bottom: 0;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-horizontal > .cheesi-menu-item,
+  .cheesi-menu-dark.cheesi-menu-horizontal > .cheesi-menu-submenu {
+    top: 0;
+    margin-top: 0;
+    padding: 0 20px;
+    border-color: #001529;
+    border-bottom: 0;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-horizontal > .cheesi-menu-item:hover {
+    background-color: #1890ff;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-horizontal > .cheesi-menu-item > a::before {
+    bottom: 0;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item,
+  .cheesi-menu-dark .cheesi-menu-item-group-title,
+  .cheesi-menu-dark .cheesi-menu-item > a,
+  .cheesi-menu-dark .cheesi-menu-item > span > a {
+    color: rgba(255, 255, 255, 65%);
+  }
+
+  .cheesi-menu-dark.cheesi-menu-inline,
+  .cheesi-menu-dark.cheesi-menu-vertical,
+  .cheesi-menu-dark.cheesi-menu-vertical-left,
+  .cheesi-menu-dark.cheesi-menu-vertical-right {
+    border-right: 0;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-inline .cheesi-menu-item,
+  .cheesi-menu-dark.cheesi-menu-vertical .cheesi-menu-item,
+  .cheesi-menu-dark.cheesi-menu-vertical-left .cheesi-menu-item,
+  .cheesi-menu-dark.cheesi-menu-vertical-right .cheesi-menu-item {
+    left: 0;
+    margin-left: 0;
+    border-right: 0;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-inline .cheesi-menu-item::after,
+  .cheesi-menu-dark.cheesi-menu-vertical .cheesi-menu-item::after,
+  .cheesi-menu-dark.cheesi-menu-vertical-left .cheesi-menu-item::after,
+  .cheesi-menu-dark.cheesi-menu-vertical-right .cheesi-menu-item::after {
+    border-right: 0;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-inline .cheesi-menu-item,
+  .cheesi-menu-dark.cheesi-menu-inline .cheesi-menu-submenu-title {
+    width: 100%;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:hover,
+  .cheesi-menu-dark .cheesi-menu-item-active,
+  .cheesi-menu-dark .cheesi-menu-submenu-active,
+  .cheesi-menu-dark .cheesi-menu-submenu-open,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:hover > a,
+  .cheesi-menu-dark .cheesi-menu-item-active > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-active > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-open > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover > a,
+  .cheesi-menu-dark .cheesi-menu-item:hover > span > a,
+  .cheesi-menu-dark .cheesi-menu-item-active > span > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-active > span > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-open > span > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected > span > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover > span > a {
+    color: #fff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-item-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-submenu-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-submenu-open > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow {
+    opacity: 1;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-item-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-submenu-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-submenu-open > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-item:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-item-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-submenu-active > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-submenu-open > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-submenu-selected > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-submenu-title:hover > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before {
+    background: #fff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item:hover {
+    background-color: transparent;
+  }
+
+  .cheesi-menu-dark.cheesi-menu-dark:not(.cheesi-menu-horizontal) .cheesi-menu-item-selected {
+    background-color: #1890ff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-selected {
+    color: #fff;
+    border-right: 0;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-selected::after {
+    border-right: 0;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-selected > a,
+  .cheesi-menu-dark .cheesi-menu-item-selected > span > a,
+  .cheesi-menu-dark .cheesi-menu-item-selected > a:hover,
+  .cheesi-menu-dark .cheesi-menu-item-selected > span > a:hover {
+    color: #fff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-selected .cheesi-menu-item-icon,
+  .cheesi-menu-dark .cheesi-menu-item-selected .anticon {
+    color: #fff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-selected .cheesi-menu-item-icon + span,
+  .cheesi-menu-dark .cheesi-menu-item-selected .anticon + span {
+    color: #fff;
+  }
+
+  .cheesi-menu.cheesi-menu-dark .cheesi-menu-item-selected,
+  .cheesi-menu-submenu-popup.cheesi-menu-dark .cheesi-menu-item-selected {
+    background-color: #1890ff;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-disabled,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled,
+  .cheesi-menu-dark .cheesi-menu-item-disabled > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled > a,
+  .cheesi-menu-dark .cheesi-menu-item-disabled > span > a,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled > span > a {
+    color: rgba(255, 255, 255, 35%) !important;
+    opacity: 0.8;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-disabled > .cheesi-menu-submenu-title,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title {
+    color: rgba(255, 255, 255, 35%) !important;
+  }
+
+  .cheesi-menu-dark .cheesi-menu-item-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-dark .cheesi-menu-item-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-dark .cheesi-menu-submenu-disabled > .cheesi-menu-submenu-title > .cheesi-menu-submenu-arrow::after {
+    background: rgba(255, 255, 255, 35%) !important;
+  }
+
+  .cheesi-menu.cheesi-menu-rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-item-group-title {
+    text-align: right;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-inline,
+  .cheesi-menu-rtl.cheesi-menu-vertical {
+    border-right: none;
+    border-left: 1px solid #f0f0f0;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-dark.cheesi-menu-inline,
+  .cheesi-menu-rtl.cheesi-menu-dark.cheesi-menu-vertical {
+    border-left: none;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-vertical.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical-left.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical-right.cheesi-menu-sub > .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical.cheesi-menu-sub > .cheesi-menu-submenu,
+  .cheesi-menu-rtl.cheesi-menu-vertical-left.cheesi-menu-sub > .cheesi-menu-submenu,
+  .cheesi-menu-rtl.cheesi-menu-vertical-right.cheesi-menu-sub > .cheesi-menu-submenu {
+    transform-origin: top right;
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-item .cheesi-menu-item-icon,
+  .cheesi-menu-rtl .cheesi-menu-submenu-title .cheesi-menu-item-icon,
+  .cheesi-menu-rtl .cheesi-menu-item .anticon,
+  .cheesi-menu-rtl .cheesi-menu-submenu-title .anticon {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-item.cheesi-menu-item-only-child > .cheesi-menu-item-icon,
+  .cheesi-menu-rtl .cheesi-menu-submenu-title.cheesi-menu-item-only-child > .cheesi-menu-item-icon,
+  .cheesi-menu-rtl .cheesi-menu-item.cheesi-menu-item-only-child > .anticon,
+  .cheesi-menu-rtl .cheesi-menu-submenu-title.cheesi-menu-item-only-child > .anticon {
+    margin-left: 0;
+  }
+
+  .cheesi-menu-submenu-rtl.cheesi-menu-submenu-popup {
+    transform-origin: 100% 0;
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-left > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-right > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow,
+  .cheesi-menu-rtl .cheesi-menu-submenu-inline > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow {
+    right: auto;
+    left: 16px;
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-left > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-right > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::before {
+    transform: rotate(-45deg) translateY(-2px);
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-left > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after,
+  .cheesi-menu-rtl .cheesi-menu-submenu-vertical-right > .cheesi-menu-submenu-title .cheesi-menu-submenu-arrow::after {
+    transform: rotate(45deg) translateY(2px);
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-vertical .cheesi-menu-item::after,
+  .cheesi-menu-rtl.cheesi-menu-vertical-left .cheesi-menu-item::after,
+  .cheesi-menu-rtl.cheesi-menu-vertical-right .cheesi-menu-item::after,
+  .cheesi-menu-rtl.cheesi-menu-inline .cheesi-menu-item::after {
+    right: auto;
+    left: 0;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-vertical .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical-left .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical-right .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-inline .cheesi-menu-item,
+  .cheesi-menu-rtl.cheesi-menu-vertical .cheesi-menu-submenu-title,
+  .cheesi-menu-rtl.cheesi-menu-vertical-left .cheesi-menu-submenu-title,
+  .cheesi-menu-rtl.cheesi-menu-vertical-right .cheesi-menu-submenu-title,
+  .cheesi-menu-rtl.cheesi-menu-inline .cheesi-menu-submenu-title {
+    text-align: right;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-inline .cheesi-menu-submenu-title {
+    padding-right: 0;
+    padding-left: 34px;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-vertical .cheesi-menu-submenu-title {
+    padding-right: 16px;
+    padding-left: 34px;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-inline-collapsed.cheesi-menu-vertical .cheesi-menu-submenu-title {
+    padding: 0 calc(50% - 16px / 2);
+  }
+
+  .cheesi-menu-rtl .cheesi-menu-item-group-list .cheesi-menu-item,
+  .cheesi-menu-rtl .cheesi-menu-item-group-list .cheesi-menu-submenu-title {
+    padding: 0 28px 0 16px;
+  }
+
+  .cheesi-menu-rtl.cheesi-menu-sub.cheesi-menu-inline .cheesi-menu-item-group-title {
+    padding-right: 32px;
+    padding-left: 0;
+  }
+  

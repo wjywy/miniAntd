@@ -1,0 +1,84 @@
+.spin{
+  margin-top: 10px;
+  
+.spin-dot {
+  display: block;
+  position: relative;
+  top: calc(50% - 18px);
+  margin: 0 auto;
+  width: 36px;
+  height: 36px;
+
+  /* Safari 和 Chrome */
+  transform: rotate(45deg);
+
+  /* Opera */
+  animation: rotate 1.2s linear infinite;
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(405deg);
+    }
+  }
+
+  .spin-dot-item {
+    // 单个圆点样式
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: lightskyblue;
+    border-radius: 50%;
+    opacity: .3;
+    animation: spin-move 1s linear infinite alternate;
+
+    @keyframes spin-move {
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  .uspin-dot-item:first-child {
+    top: 0;
+    left: 0;
+  }
+
+  .spin-dot-item:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation-delay: .4s;
+  }
+
+  .spin-dot-item:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    animation-delay: .8s;
+  }
+
+  .spin-dot-item:last-child {
+    bottom: 0;
+    left: 0;
+    animation-delay: 1.2s;
+  }
+}
+}
+
+.spin-sm .spin-dot{
+  width: 20px;
+  height: 20px;
+
+  .spin-dot-item {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+.spin-lg .spin-dot{
+  width: 45px;
+  height: 45px;
+
+  .spin-dot-item {
+    width: 14px;
+    height: 14px;
+  }
+}

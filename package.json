@@ -64,7 +64,8 @@
     "jest-axe": "^7.0.0",
     "mockdate": "^3.0.5",
     "rc-field-form": "^1.27.4",
-    "rc-progress": "^3.4.1"
+    "rc-progress": "^3.4.1",
+    "rc-menu": "^9.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
