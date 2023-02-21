@@ -30,11 +30,12 @@ const deleteLessPath = (startDir: string) => {
       } else deleteLessPath(file_path);
     } else {
       if (file.includes('index')) {
-        const content = fs.readFileSync(file_path);
-        fs.writeFileSync(
-          file_path,
-          content.toString().replace("import '../style';", ''),
-        );
+        let content: string | Buffer = fs.readFileSync(file_path);
+        content = content.toString().replace("import '../style';", '');
+        content = content
+          .toString()
+          .replace("import './style/index.less';", '');
+        fs.writeFileSync(file_path, content);
       }
     }
   }

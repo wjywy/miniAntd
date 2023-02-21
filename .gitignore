@@ -8,3 +8,4 @@ node_modules
 .umi
 yarn-error.log
 yarn.lock
+docs-dist

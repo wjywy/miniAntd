@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 // import Breadcrumb from '.';
 import BreadcrumbItem from './breadcrumbitem';
-import './style/index.less';
 
 // 路由
 export interface Route {

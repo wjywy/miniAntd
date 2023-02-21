@@ -1,4 +1,4 @@
 import Alert from './Alert';
 
-import './style/index.less';
+import '../style';
 export default Alert;
