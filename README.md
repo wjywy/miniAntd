@@ -8,14 +8,12 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.com/Jacky-Summer/monki-ui.svg?branch=master)](https://travis-ci.com/Jacky-Summer/monki-ui) [![](https://img.shields.io/npm/v/monki-ui.svg)](https://www.npmjs.com/package/monki-ui) ![](https://img.shields.io/github/license/Jacky-Summer/monki-ui) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
-![david-dev-image](https://img.shields.io/david/dev/Jacky-Summer/monki-ui?style=flat-square) ![david-image](https://img.shields.io/david/Jacky-Summer/monki-ui?style=flat-square) ![](https://img.shields.io/github/stars/Jacky-Summer/monki-ui?style=social)
 
-Monki UI，是一款基于 Dumi，由 React + TypeScript 开发的个人组件库 🎉。
+cheesi UI，是一款基于 Dumi，由 React + TypeScript 开发的组件库 🎉。
 
 </div>
 
-该开源项目是我为进阶 React，同时探索组件库设计开发思路所做的，故不可用于生产环境。由于个人设计能力有限，故 UI 设计方面会大量参考[Ant Design 组件库](https://ant.design/index-cn)，同时组件的使用方式也会参照 Ant Design 进行实现。如果你也想学习组件开发，欢迎加入或提供意见，你的 star ⭐，是对我最大的鼓励。
+UI 设计方面会大量参考[Ant Design 组件库](https://ant.design/index-cn)，同时组件的使用方式也会参照 Ant Design 进行实现。由于我们能力有限，有不周之处还望批评指正！
 
 ## ✨ 特性
 
@@ -31,17 +29,17 @@ Monki UI，是一款基于 Dumi，由 React + TypeScript 开发的个人组件�
 使用 npm 或 yarn 安装（推荐）
 
 ```bash
-yarn add monki-ui
+yarn add cheesi
 ```
 
 ```bash
-npm install monki-ui
+npm install cheesi
 ```
 
 ## 🔨 示例
 
 ```jsx
-import { Button } from 'monki-ui'
+import { Button } from 'cheesi'
 
 const App = () => (
   <>
@@ -53,7 +51,7 @@ const App = () => (
 引入样式：
 
 ```jsx
-import 'monki-ui/dist/index.css'
+import 'cheesi/dist/index.css'
 ```
 
 ## 计划
@@ -61,21 +59,12 @@ import 'monki-ui/dist/index.css'
 🚧 开发中......
 
 - [ ] 开发 Upload 组件
+- [ ] 开发List 组件
+- [ ] 添加切换主题功能
 
 ✨ 已完成
 
 - [x] CSS 样式解决方案、初始化文件结构、UI 设计
-- [x] Button 组件开发与测试
-- [x] 增加 Travis CI
-- [x] 创建入口文件，并发布到 npm
-- [x] 开发 Alert 组件
-- [x] 开发 Menu 组件
-- [x] 开发 Tab 组件
-- [x] 开发 Input 组件
-- [x] 开发 AutoComplete 组件
-- [x] 开发 Tag 组件
-- [x] 开发 Select 组件
+- [x] 开发 spin、alert、avatar、breadcrumb、button、drawer、form、icon、input、layout、menu、progress、select、switch、table组件
+- [x] 部分组件的测试
 
-## 开源协议
-
-版权 (c) 2020-至今 归 JackySummer 所有. 详情请阅 [LICENSE](./LICENSE).
