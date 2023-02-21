@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './style/index.less';
 
 export interface Column {
   key: string;

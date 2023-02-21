@@ -11,12 +11,12 @@ export default defineConfig({
   resolve: {
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src' }],
-    entryFile: './src/index.tsx', //这里是API表格解析入口
+    // entryFile: './src/index.tsx', //这里是API表格解析入口
   },
   favicons: ['/logo.png'],
-  base: '/cheesi',
-  publicPath: '/',
-  exportStatic: {},
+  // base: '/cheesi',
+  // publicPath: '/',
+  // exportStatic: {},
   alias: {
     cheesi: path.resolve(__dirname, 'src'),
   },
