@@ -1,0 +1,57 @@
+@import '../../style/themes/variable.less';
+@import './mixins.less';
+
+.alt-main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.alert {
+  // transform:translate(-50%) !important;
+  // color: rgba(255, 255, 255, 99.1%);
+  position: unset;
+  // top: 10px;
+  // left: 50%;
+  z-index: 999;
+  padding: @alt-padding-y @alt-padding-x;
+  padding-right: 1rem;
+  margin: 1rem;
+  min-width: 60px;
+  // background-color:aliceblue;
+  border-color: @primary;
+  border-style: solid;
+  // font-family: @alt-font-family;
+  font-size: @font-size-base;
+  // color: @primary;
+  border-radius: @border-radius-lg;
+  // box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 3.5%),
+  //   100px 100px 80px rgba(0, 0, 0, 7%);
+
+  .content {
+    margin: 0.275em 20px 0.275em 0;
+    // display:table;
+  }
+
+  .quit {
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+  }
+}
+
+.alt-success {
+  .alt-style(@success,@success);
+}
+
+.alt-danger {
+  .alt-style(@danger,@danger);
+}
+
+.alt-info {
+  .alt-style(@info,@info);
+}
+
+.alt-warning {
+  .alt-style(@warning,@warning);
+}
