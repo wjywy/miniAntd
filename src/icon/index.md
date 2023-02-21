@@ -1,5 +1,5 @@
 ---
-title: Icon
+title: Icon 图标
 nav:
   title: '组件'
   path: /components

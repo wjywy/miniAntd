@@ -1,5 +1,5 @@
 ---
-title: selector
+title: selector 选择器
 nav:
   title: '组件'
   path: /components
