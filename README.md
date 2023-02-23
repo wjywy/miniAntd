@@ -9,7 +9,7 @@
 <div align="center">
 
 
-cheesi UI，是一款基于 Dumi，由 React + TypeScript 开发的组件库 🎉。
+[cheesi UI](http://cheesi.wangyixuan2002.cn/)，是一款基于 Dumi，由 React + TypeScript 开发的组件库 🎉。
 
 </div>
 
