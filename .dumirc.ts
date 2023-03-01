@@ -4,6 +4,7 @@ import * as path from 'path';
 export default defineConfig({
   outputPath: 'docs-dist',
   title: 'cheesi',
+  // apiParser: {},
   themeConfig: {
     name: 'cheesi',
     logo: '/logo.png',

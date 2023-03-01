@@ -7,6 +7,7 @@ export interface BasicInputProps {
   size?: 'large' | 'small' | 'middle';
   status?: 'error' | 'warning';
   borderd?: boolean;
+  showPassword: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }
@@ -18,6 +19,7 @@ const App: React.FC<BasicInputProps> = ({
   borderd,
   onChange,
   onFocus,
+  showPassword = true,
 }) => {
   const sizeContextValue = React.useContext(SizeContext);
   size = size || sizeContextValue?.size || 'small';
@@ -36,7 +38,7 @@ const App: React.FC<BasicInputProps> = ({
   return (
     <>
       <input
-        type="text"
+        type={showPassword ? 'text' : 'password'}
         placeholder={placeholder}
         onChange={onChange}
         onFocus={onFocus}
