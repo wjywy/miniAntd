@@ -7,7 +7,7 @@ export interface BasicInputProps {
   size?: 'large' | 'small' | 'middle';
   status?: 'error' | 'warning';
   borderd?: boolean;
-  showPassword: boolean;
+  showPassword?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }
