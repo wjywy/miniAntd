@@ -7,10 +7,17 @@ export { default as Form } from './form';
 export { default as Icon } from './icon';
 export { default as Input } from './input';
 export { Content, Footer, Header, Layout, Sider } from './layout';
+export { default as Menu } from './menu';
+export type {
+  MenuItemProps,
+  MenuProps,
+  MenuRef,
+  MenuTheme,
+  SubMenuProps,
+} from './menu';
 export { default as Progress } from './progress';
 export { default as Selector } from './select';
-export { default as Switch } from './switch';
-export { default as Menu } from './menu';
-export type { MenuItemProps, MenuProps, MenuTheme, SubMenuProps, MenuRef } from './menu';
 export { default as Spin } from './Spin';
+export { default as Switch } from './switch';
 export { default as Table } from './table';
+export { default as TypeWriter } from './typewriter';
